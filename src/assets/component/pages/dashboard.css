@@ -1,0 +1,155 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.home-container {
+  min-height: 100vh;
+  background-color: #0b0e11;
+  color: #fff;
+  padding-bottom: 2rem;
+}
+
+/* Navbar */
+.navbar {
+  height: 60px;
+  background-color: #161a1e;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.5rem;
+}
+
+.logo {
+  color: #f0b90b;
+  font-size: 1.3rem;
+}
+
+.wallet-btn {
+  background: none;
+  border: 1px solid #f0b90b;
+  color: #f0b90b;
+  padding: 6px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.walletdetails {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+/* Balance Card */
+.balance-card {
+  background-color: #161a1e;
+  margin: 1.5rem;
+  padding: 1.5rem;
+  border-radius: 12px;
+}
+
+.balance-label {
+  color: #848e9c;
+  font-size: 0.9rem;
+}
+
+.balance-amount {
+  font-size: 1.8rem;
+  margin: 0.5rem 0 1.2rem;
+}
+
+.account-number {
+  color: #848e9c;
+  font-size: 0.85rem;
+}
+
+.bank-name,
+.account-name {
+  font-size: 0.9rem;
+}
+
+.actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.action-btn {
+  flex: 1;
+  padding: 12px;
+  background-color: #f0b90b;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  color: #000;
+}
+
+/* Services Section */
+.market {
+  margin: 1.5rem;
+}
+
+.market h3 {
+  margin-bottom: 1rem;
+}
+
+.market-cards {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.market-card {
+  background-color: #161a1e;
+  border-radius: 12px;
+  padding: 1.2rem;
+  flex: 1;
+  min-width: 160px;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.6rem;
+}
+
+.card-icon {
+  font-size: 1.4rem;
+}
+
+.market-card h4 {
+  font-size: 1rem;
+}
+
+.card-desc {
+  font-size: 0.85rem;
+  color: #848e9c;
+  margin-bottom: 1rem;
+}
+
+.card-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #f0b90b;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  color: #000;
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .balance-card,
+  .market {
+    margin: 1rem;
+  }
+
+  .walletdetails {
+    flex-direction: column;
+  }
+}

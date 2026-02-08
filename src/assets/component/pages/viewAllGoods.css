@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Page */
+.goods-page {
+  min-height: 100vh;
+  background-color: #0b0e11;
+  padding: 1.2rem;
+  color: #fff;
+}
+
+/* Header */
+.goods-header {
+  margin-bottom: 1.2rem;
+}
+
+.goods-header h2 {
+  color: #f0b90b;
+  font-size: 1.4rem;
+}
+
+.goods-header p {
+  font-size: 0.85rem;
+  color: #848e9c;
+}
+
+/* Grid */
+.goods-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 1rem;
+}
+
+/* Card */
+.goods-card {
+  background-color: #161a1e;
+  border-radius: 14px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s ease, border 0.2s ease;
+  border: 1px solid transparent;
+}
+
+.goods-card:hover {
+  transform: translateY(-3px);
+  border: 1px solid #f0b90b;
+}
+
+/* Info */
+.goods-name {
+  font-size: 0.95rem;
+  margin-bottom: 0.2rem;
+}
+
+.goods-shop {
+  font-size: 0.75rem;
+  color: #848e9c;
+}
+
+/* Footer */
+.goods-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.goods-price {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+/* Button */
+.buy-btn {
+  background-color: #f0b90b;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  color: #000;
+}
+
+/* Mobile fine-tune */
+@media (max-width: 360px) {
+  .goods-page {
+    padding: 1rem;
+  }
+}
