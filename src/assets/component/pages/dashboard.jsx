@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./dashboard.css";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 const Dashboard = () => {
   const [loading, setLoading] = useState(true);
@@ -48,7 +49,9 @@ const Dashboard = () => {
       {/* ================= TOP NAVBAR ================= */}
       <header className="navbar">
         <h1 className="logo">RamsaPay</h1>
-        <button className="wallet-btn">Add Shop</button>
+
+        {/* ============= addd shop button =============*/}
+      <Link to={"/add-shop"}> <button className="wallet-btn">Add Shop</button> </Link>  
       </header>
 
 

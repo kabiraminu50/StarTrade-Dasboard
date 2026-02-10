@@ -88,3 +88,14 @@
     padding: 1.2rem;
   }
 }
+
+
+.shop-form input,
+.shop-form select {
+  width: 100%;
+  padding: 12px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
