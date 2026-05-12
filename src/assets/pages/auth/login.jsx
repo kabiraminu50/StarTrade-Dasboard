@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import "./login.css";
+import {roleRedirect} from "../utils/roleRedirect"
+
 
 const Login = () => {
   const navigate = useNavigate();
@@ -23,11 +25,21 @@ const Login = () => {
         password,        
       });
 
-       console.log(res.data);
-      const token = res.data.token; // or res.data.accessToken
-      localStorage.setItem("token", token);
+       
+     console.log(res.data);
 
-      navigate("/dashboard");
+const token = res.data.token;
+
+localStorage.setItem("token", token);
+
+localStorage.setItem(
+  "user",
+  JSON.stringify(res.data.user)
+);
+
+const role = res.data.user.role;
+
+      navigate(roleRedirect(role));
     } catch (err) {
       setError("Login failed. Invalid credentials.");
     } finally {

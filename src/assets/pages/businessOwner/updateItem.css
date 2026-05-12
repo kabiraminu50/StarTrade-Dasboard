@@ -1,0 +1,94 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.mainCon-updateItem {
+  background-color: black;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px; /* important for small screens */
+}
+
+/* FORM CONTAINER */
+form {
+  background: #111;
+  border: 1px solid goldenrod;
+  padding: 20px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 400px; /* prevents it from being too wide */
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  color:   goldenrod;
+}
+
+/* INPUTS */
+form input,
+form textarea {
+  width: 100%;
+
+
+  padding: 12px;
+  border: 1px solid #f0b90b;
+  border-radius: 8px;
+  outline: none;
+  font-size: 14px;
+}
+
+/* TEXTAREA */
+form textarea {
+  min-height: 100px;
+  resize: none;
+}
+
+/* BUTTON */
+form button {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background-color: #4CAF50;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+.option-btn {
+
+
+padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background-color: rgb(18, 18, 18);
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+
+}
+/* HOVER (only affects desktop) */
+form button:hover {
+  background-color: #45a049;
+}
+
+/* 📱 MOBILE ADJUSTMENTS */
+@media (max-width: 480px) {
+  form {
+    padding: 15px;
+    gap: 10px;
+  }
+
+  form input,
+  form textarea {
+    font-size: 13px;
+    padding: 10px;
+  }
+
+  form button {
+    font-size: 14px;
+  }
+}
+

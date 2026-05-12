@@ -184,9 +184,9 @@ const AddShop = () => {
           </div>
 
           <div className="form-group">
-            <label>Shop Image URL (optional)</label>
+            <label>Shop Image (optional)</label>
             <input
-              type="text"
+              type="file"
               value={imageUrl}
               onChange={(e) => setImageUrl(e.target.value)}
             />

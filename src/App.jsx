@@ -3,11 +3,13 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-
-import Login from './assets/component/pages/login'
-import Dashboard from './assets/component/pages/dashboard'
-import AddShop from './assets/component/pages/addShop'
-import ViewAllGoods from './assets/component/pages/viewAllGoods'
+import Login from './assets/pages/auth/login'
+import Dashboard from './assets/pages/businessOwner/dashboard'
+import AddShop from './assets/pages/businessOwner/addShop'
+import ViewAllGoods from './assets/pages/businessOwner/viewAllGoods'
+import Transfer from './assets/pages/businessOwner/transfer'
+import UpdateItem from './assets/pages/businessOwner/updateItem'
+import ShopFeature from './assets/pages/businessOwner/shopFeature'
 function App() {
 
 
@@ -18,7 +20,11 @@ function App() {
     <Route path='/dashboard' element={<Dashboard/>}/>
     <Route path='/add-shop' element={<AddShop/>}/>
     <Route path='/view-all-goods' element={<ViewAllGoods/>}/>
+    <Route path='/transfer' element={<Transfer/>}/>
+    <Route path="/update-item/:id" element={<UpdateItem />} />
+    <Route path='/shop-feature' element={<ShopFeature/>}/>
   </Routes>
+
 </BrowserRouter>
 
 

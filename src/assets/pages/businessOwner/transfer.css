@@ -1,0 +1,200 @@
+.pro-transfer {
+  max-width: 420px;
+  margin: 40px auto;
+  padding: 24px;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.page-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 10px;
+}
+
+.error-text {
+  background: #fee2e2;
+  color: #dc2626;
+  padding: 12px;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+/* ===== Amount ===== */
+
+.amount-card {
+  background: #f9fafb;
+  border: 2px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 20px;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.amount-card span {
+  font-size: 28px;
+  font-weight: bold;
+  color: #111827;
+}
+
+.amount-card input {
+  border: none;
+  outline: none;
+  background: transparent;
+
+  width: 100%;
+  font-size: 30px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.amount-card input::placeholder {
+  color: #9ca3af;
+}
+
+/* ===== Input ===== */
+
+.input-box {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.input-box label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.input-box input {
+  height: 52px;
+  border-radius: 14px;
+  border: 1px solid #d1d5db;
+
+  padding: 0 16px;
+  font-size: 16px;
+
+  transition: 0.2s ease;
+}
+
+.input-box input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
+}
+
+/* ===== Bank Section ===== */
+
+.bank-section {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.bank-section input {
+  height: 50px;
+  border-radius: 14px;
+  border: 1px solid #d1d5db;
+
+  padding: 0 16px;
+  font-size: 15px;
+  outline: none;
+}
+
+.bank-section input:focus {
+  border-color: #2563eb;
+}
+
+.bank-list {
+  max-height: 220px;
+  overflow-y: auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* ===== Bank Item ===== */
+
+.bank-item {
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+
+  padding: 14px 16px;
+  border-radius: 14px;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+
+  font-weight: 500;
+  color: #111827;
+}
+
+.bank-item:hover {
+  background: #eff6ff;
+  border-color: #2563eb;
+}
+
+.bank-item.active {
+  background: #2563eb;
+  color: white;
+  border-color: #2563eb;
+}
+
+/* ===== Verified ===== */
+
+.verified {
+  background: #ecfdf5;
+  color: #059669;
+
+  padding: 14px;
+  border-radius: 14px;
+
+  font-weight: 600;
+  font-size: 15px;
+}
+
+/* ===== Button ===== */
+
+.send-btn {
+  height: 56px;
+  border: none;
+  border-radius: 16px;
+
+  background: #2563eb;
+  color: white;
+
+  font-size: 16px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.send-btn:hover {
+  background: #1d4ed8;
+}
+
+.send-btn:disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
+}
+
+/* ===== Responsive ===== */
+
+@media (max-width: 500px) {
+  .pro-transfer {
+    margin: 0;
+    min-height: 100vh;
+    border-radius: 0;
+  }
+}

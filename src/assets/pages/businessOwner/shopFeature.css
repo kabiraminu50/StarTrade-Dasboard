@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+
+/* Reset feel */
+* {
+  box-sizing: border-box;
+}
+
+/* Page */
+.container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* FIXED */
+  background: linear-gradient(135deg, #eef2f7, #e6ecf5);
+  padding: 20px 15px;
+}
+#f0b90
+/* Card */
+.form-box {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: 0.3s ease;
+  max-height: 90vh;
+  overflow-y: auto;
+
+
+}
+
+/* Title */
+.form-box h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 22px;
+  font-weight: 600;
+  color: #222;
+}
+
+/* Form layout */
+.form-box form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Inputs */
+.form-box input,
+.form-box textarea,
+.form-box select {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+/* Focus effect */
+.form-box input:focus,
+.form-box textarea:focus,
+.form-box select:focus {
+  border-color: #000;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.05);
+}
+
+/* File input */
+.form-box input[type="file"] {
+  border: none;
+  padding: 5px;
+}
+
+/* Preview image */
+.form-box img {
+  width: 100%;
+  margin-top: 8px;
+  border-radius: 10px;
+  object-fit: cover;
+  max-height: 200px;
+}
+
+/* Button */
+.form-box button {
+  padding: 12px;
+  background: black;
+  color:#f0b90b;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.25s ease;
+}
+
+/* Hover */
+.form-box button:hover {
+  background: #222;
+  transform: translateY(-1px);
+}
+
+/* Disabled */
+.form-box button:disabled {
+  background: #999;
+  cursor: not-allowed;
+}
+
+/* Mobile optimization */
+@media (max-width: 480px) {
+  .form-box {
+    padding: 15px;
+    border-radius: 12px;
+  }
+
+  .form-box h2 {
+    font-size: 18px;
+  }
+
+  .form-box input,
+  .form-box textarea,
+  .form-box select {
+    font-size: 13px;
+    padding: 10px;
+  }
+
+  .form-box button {
+    padding: 10px;
+  }
+}
