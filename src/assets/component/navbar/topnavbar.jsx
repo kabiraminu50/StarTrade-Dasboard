@@ -1,48 +1,92 @@
-// TopNavbar.jsx
+import { useNavigate } from "react-router-dom";
 
 import "./topNavbar.css";
+
 import {
-  Menu,
   Bell,
   ChevronDown,
+  Menu,
+  Sparkles,
 } from "lucide-react";
 
-const TopNavbar = () => {
+const TopNavbar = ({ toggleSidebar }) => {
+
+  const navigate = useNavigate();
+
   return (
+
     <header className="top-navbar">
+
       {/* LEFT */}
+
       <div className="navbar-left">
-        <button className="icon-btn">
-          <Menu size={24} />
+
+        {/* MENU BUTTON */}
+
+        <button
+          className="menu-btn"
+          onClick={toggleSidebar}
+        >
+
+          <Menu size={22} />
+
         </button>
 
-        <div className="logo-box">
-          <div className="logo-icon">S</div>
-          <h2>ShopEasy</h2>
+        {/* LOGO */}
+
+        <div className="navbar-logo">
+
+          <div className="navbar-logo-icon">
+
+            <Sparkles
+              size={18}
+              fill="#F0B90B"
+              color="#F0B90B"
+            />
+
+          </div>
+
+          <h2>Trade</h2>
+
         </div>
+
       </div>
 
       {/* RIGHT */}
+
       <div className="navbar-right">
-        {/* Notification */}
+
+        {/* NOTIFICATION */}
+
         <button className="icon-btn notification-btn">
-          <Bell size={22} />
+
+          <Bell size={20} />
 
           <span className="notification-badge">
             3
           </span>
+
         </button>
 
-        {/* User */}
-        <div className="user-box">
+        {/* USER */}
+
+        <button
+          className="user-box"
+          onClick={() => navigate("/customer/profile")}
+        >
+
           <div className="avatar">
             JD
           </div>
 
           <ChevronDown size={18} />
-        </div>
+
+        </button>
+
       </div>
+
     </header>
+
   );
 };
 

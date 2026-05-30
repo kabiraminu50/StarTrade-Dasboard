@@ -1,0 +1,198 @@
+.cart-page {
+  min-height: 100vh;
+  background: #e6e8ea;
+  padding: 20px;
+}
+
+.cart-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.cart-title {
+  font-size: 30px;
+  font-weight: 700;
+  color: #1e2329;
+  margin-bottom: 25px;
+}
+
+.empty-cart {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 60px 20px;
+  text-align: center;
+  color: #76808f;
+  font-size: 16px;
+  border: 1px solid #dfe3e8;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  background: #ffffff;
+
+  padding: 20px;
+  margin-bottom: 15px;
+
+  border-radius: 16px;
+
+  border: 1px solid #dfe3e8;
+
+  transition: all 0.25s ease;
+}
+
+.cart-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(15, 15, 15, 0.08);
+}
+
+.cart-image {
+  width: 90px;
+  height: 90px;
+
+  object-fit: cover;
+
+  border-radius: 12px;
+  border: 1px solid #eaecef;
+}
+
+.cart-info {
+  flex: 1;
+}
+
+.cart-info h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1e2329;
+  margin-bottom: 10px;
+}
+
+.cart-info p {
+  color: #76808f;
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+.item-price {
+  color: #f0b90b !important;
+  font-weight: 700;
+  font-size: 16px !important;
+}
+
+.cart-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.cart-actions button {
+  width: 38px;
+  height: 38px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: #f0b90b;
+  color: #1e2329;
+
+  font-size: 18px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.cart-actions button:hover {
+  transform: scale(1.05);
+}
+
+.quantity {
+  min-width: 30px;
+  text-align: center;
+
+  font-size: 18px;
+  font-weight: 700;
+
+  color: #1e2329;
+}
+
+.cart-summary {
+  margin-top: 25px;
+
+  background: #ffffff;
+
+  border: 1px solid #dfe3e8;
+  border-radius: 16px;
+
+  padding: 25px;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+
+  margin-bottom: 12px;
+
+  color: #474d57;
+  font-size: 15px;
+}
+
+.summary-total {
+  display: flex;
+  justify-content: space-between;
+
+  margin-top: 15px;
+  padding-top: 15px;
+
+  border-top: 1px solid #eaecef;
+
+  font-size: 22px;
+  font-weight: 700;
+
+  color: #1e2329;
+}
+
+.checkout-btn {
+  width: 100%;
+
+  margin-top: 20px;
+
+  border: none;
+  border-radius: 12px;
+
+  padding: 15px;
+
+  background: #f0b90b;
+  color: #1e2329;
+
+  font-size: 16px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.checkout-btn:hover {
+  opacity: 0.95;
+}
+
+@media (max-width: 768px) {
+  .cart-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .cart-image {
+    width: 100%;
+    height: 200px;
+  }
+
+  .cart-actions {
+    width: 100%;
+    justify-content: center;
+  }
+}

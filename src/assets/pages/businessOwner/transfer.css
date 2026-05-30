@@ -1,48 +1,78 @@
 .pro-transfer {
-  max-width: 420px;
-  margin: 40px auto;
-  padding: 24px;
-  background: #ffffff;
-  border-radius: 20px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 430px;
+
+  margin: 0 auto;
+  min-height: 100vh;
+
+  padding: 24px 18px 40px;
+
+  background: #0b0e11;
 
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 22px;
+
+  color: white;
 }
+
+/* ===== HEADER ===== */
 
 .page-title {
   font-size: 28px;
   font-weight: 700;
-  color: #111827;
-  margin-bottom: 10px;
+  color: #f0b90b;
+
+  margin-top: 10px;
 }
+
+/* ===== ERROR ===== */
 
 .error-text {
-  background: #fee2e2;
-  color: #dc2626;
-  padding: 12px;
-  border-radius: 10px;
+  background: rgba(246, 70, 93, 0.12);
+  border: 1px solid rgba(246, 70, 93, 0.2);
+
+  color: #f6465d;
+
+  padding: 14px;
+  border-radius: 14px;
+
   font-size: 14px;
+  font-weight: 500;
 }
 
-/* ===== Amount ===== */
+/* ===== CARD ===== */
+
+.amount-card,
+.input-box input,
+.bank-section input,
+.bank-item {
+  background: #1e2329;
+  border: 1px solid #2b3139;
+}
+
+/* ===== AMOUNT ===== */
 
 .amount-card {
-  background: #f9fafb;
-  border: 2px solid #e5e7eb;
-  border-radius: 16px;
-  padding: 20px;
+  border-radius: 20px;
+
+  padding: 22px 20px;
 
   display: flex;
   align-items: center;
   gap: 10px;
+
+  transition: 0.2s ease;
+}
+
+.amount-card:focus-within {
+  border-color: #f0b90b;
 }
 
 .amount-card span {
-  font-size: 28px;
-  font-weight: bold;
-  color: #111827;
+  font-size: 30px;
+  font-weight: 700;
+  color: #f0b90b;
 }
 
 .amount-card input {
@@ -51,46 +81,57 @@
   background: transparent;
 
   width: 100%;
-  font-size: 30px;
-  font-weight: 600;
-  color: #111827;
+
+  font-size: 32px;
+  font-weight: 700;
+
+  color: white;
 }
 
 .amount-card input::placeholder {
-  color: #9ca3af;
+  color: #5e6673;
 }
 
-/* ===== Input ===== */
+/* ===== INPUT ===== */
 
 .input-box {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 10px;
 }
 
 .input-box label {
   font-size: 14px;
   font-weight: 600;
-  color: #374151;
+
+  color: #b7bdc6;
 }
 
 .input-box input {
-  height: 52px;
-  border-radius: 14px;
-  border: 1px solid #d1d5db;
+  height: 56px;
+
+  border-radius: 16px;
 
   padding: 0 16px;
-  font-size: 16px;
+
+  font-size: 15px;
+  color: white;
+
+  outline: none;
 
   transition: 0.2s ease;
 }
 
 .input-box input:focus {
-  border-color: #2563eb;
-  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
+  border-color: #f0b90b;
+  box-shadow: 0 0 0 3px rgba(240, 185, 11, 0.12);
 }
 
-/* ===== Bank Section ===== */
+.input-box input::placeholder {
+  color: #6b7280;
+}
+
+/* ===== BANK SECTION ===== */
 
 .bank-section {
   display: flex;
@@ -99,78 +140,109 @@
 }
 
 .bank-section input {
-  height: 50px;
-  border-radius: 14px;
-  border: 1px solid #d1d5db;
+  height: 54px;
+
+  border-radius: 16px;
 
   padding: 0 16px;
+
   font-size: 15px;
+  color: white;
+
   outline: none;
+
+  transition: 0.2s ease;
 }
 
 .bank-section input:focus {
-  border-color: #2563eb;
+  border-color: #f0b90b;
 }
 
+.bank-section input::placeholder {
+  color: #6b7280;
+}
+
+/* ===== BANK LIST ===== */
+
 .bank-list {
-  max-height: 220px;
+  max-height: 240px;
+
   overflow-y: auto;
 
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 12px;
+
+  padding-right: 4px;
 }
 
-/* ===== Bank Item ===== */
+/* SCROLLBAR */
+
+.bank-list::-webkit-scrollbar {
+  width: 4px;
+}
+
+.bank-list::-webkit-scrollbar-thumb {
+  background: #2b3139;
+  border-radius: 20px;
+}
+
+/* ===== BANK ITEM ===== */
 
 .bank-item {
-  background: #f9fafb;
-  border: 1px solid #e5e7eb;
+  padding: 16px;
 
-  padding: 14px 16px;
-  border-radius: 14px;
+  border-radius: 16px;
 
   cursor: pointer;
 
   transition: 0.2s ease;
 
   font-weight: 500;
-  color: #111827;
+  color: white;
 }
 
 .bank-item:hover {
-  background: #eff6ff;
-  border-color: #2563eb;
+  border-color: #f0b90b;
+  background: #232a32;
 }
 
 .bank-item.active {
-  background: #2563eb;
-  color: white;
-  border-color: #2563eb;
+  background: rgba(240, 185, 11, 0.15);
+
+  border-color: #f0b90b;
+
+  color: #f0b90b;
 }
 
-/* ===== Verified ===== */
+/* ===== VERIFIED ===== */
 
 .verified {
-  background: #ecfdf5;
-  color: #059669;
+  background: rgba(14, 203, 129, 0.12);
 
-  padding: 14px;
-  border-radius: 14px;
+  border: 1px solid rgba(14, 203, 129, 0.2);
 
-  font-weight: 600;
-  font-size: 15px;
-}
+  color: #0ecb81;
 
-/* ===== Button ===== */
+  padding: 16px;
 
-.send-btn {
-  height: 56px;
-  border: none;
   border-radius: 16px;
 
-  background: #2563eb;
-  color: white;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+/* ===== BUTTON ===== */
+
+.send-btn {
+  width: 100%;
+  height: 58px;
+
+  border: none;
+  border-radius: 18px;
+
+  background: #f0b90b;
+  color: #111;
 
   font-size: 16px;
   font-weight: 700;
@@ -181,20 +253,46 @@
 }
 
 .send-btn:hover {
-  background: #1d4ed8;
+  opacity: 0.92;
 }
 
 .send-btn:disabled {
-  background: #9ca3af;
+  background: #2b3139;
+  color: #777;
+
   cursor: not-allowed;
 }
 
-/* ===== Responsive ===== */
+/* ===== RESPONSIVE ===== */
 
-@media (max-width: 500px) {
+@media screen and (max-width: 768px) {
+
   .pro-transfer {
-    margin: 0;
-    min-height: 100vh;
-    border-radius: 0;
+    max-width: 100%;
   }
+
+}
+
+@media screen and (max-width: 500px) {
+
+  .pro-transfer {
+    padding: 18px 14px 40px;
+  }
+
+  .page-title {
+    font-size: 24px;
+  }
+
+  .amount-card {
+    padding: 18px 16px;
+  }
+
+  .amount-card input {
+    font-size: 28px;
+  }
+
+  .send-btn {
+    height: 54px;
+  }
+
 }

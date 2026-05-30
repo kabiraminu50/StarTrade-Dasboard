@@ -1,0 +1,16 @@
+.all-items-page {
+  background: #0b0b0b;
+  min-height: 100vh;
+  color: white;
+}
+
+/* MAIN CONTENT */
+
+.all-items-wrapper {
+  width: 100%;
+  max-width: 1400px;
+
+  margin: 0 auto;
+
+  padding: 20px;
+}

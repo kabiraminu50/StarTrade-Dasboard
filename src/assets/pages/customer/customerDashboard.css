@@ -15,10 +15,18 @@
 
   padding: 24px;
 
+  /* SPACE FOR FIXED BOTTOM NAVBAR */
+
+  padding-bottom: calc(80px + 24px);
+
   color: white;
+
+  box-sizing: border-box;
 }
 
-/* Main content wrapper */
+/* =========================
+   MAIN CONTENT WRAPPER
+========================= */
 
 .dashboard-container {
   width: 100%;
@@ -43,9 +51,49 @@
 }
 
 /* =========================
-   GREETING + OVERVIEW GAP
+   GREETING SECTION
 ========================= */
 
 .dashboard-header {
   margin-bottom: 24px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+  .dashboard-page {
+    padding: 18px;
+
+    padding-bottom: calc(80px + 18px);
+  }
+
+  .dashboard-navbar {
+    margin-bottom: 22px;
+  }
+
+  .dashboard-header {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .dashboard-page {
+    padding: 14px;
+
+    padding-bottom: calc(80px + 14px);
+  }
+
+  .dashboard-navbar {
+    height: 72px;
+
+    margin-bottom: 18px;
+  }
+
+  .dashboard-header {
+    margin-bottom: 18px;
+  }
 }

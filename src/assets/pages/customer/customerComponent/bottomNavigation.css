@@ -1,0 +1,55 @@
+.bottomNavigation{
+    width: 100%;
+    height: 75px;
+
+    background-color: #111;
+
+    position: fixed;
+    bottom: 0;
+    left: 0;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    border-top: 1px solid #222;
+
+    z-index: 100;
+}
+
+.navItem{
+    border: none;
+    background: none;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 4px;
+
+    color: #777;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.navItem span{
+    font-size: 12px;
+}
+
+.activeNav{
+    color: #F4B400;
+}
+
+@media screen and (max-width: 480px){
+
+    .bottomNavigation{
+        height: 70px;
+    }
+
+    .navItem span{
+        font-size: 11px;
+    }
+
+}

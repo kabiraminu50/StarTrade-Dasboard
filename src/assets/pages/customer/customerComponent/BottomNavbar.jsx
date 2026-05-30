@@ -1,26 +1,29 @@
 import "./BottomNavbar.css";
+import { useNavigate } from "react-router-dom";
 
 import {
-  House,
+  Logs,
   Store,
   ShoppingCart,
   ClipboardList,
-  User,
+  Send,
 } from "lucide-react";
 
 const navItems = [
   {
     id: 1,
-    label: "Dashboard",
-    icon: House,
+    label: "Items",
+    icon: Logs,
+    path: "/customer/all-items",
     active: true,
     badge: null,
   },
 
   {
     id: 2,
-    label: "All Shops",
+    label: "Stores",
     icon: Store,
+    path: "/customer/all-stores",
     active: false,
     badge: null,
   },
@@ -29,6 +32,7 @@ const navItems = [
     id: 3,
     label: "My Cart",
     icon: ShoppingCart,
+    path: "/customer/cart",
     active: false,
     badge: 3,
   },
@@ -37,20 +41,24 @@ const navItems = [
     id: 4,
     label: "Orders",
     icon: ClipboardList,
+    path: "/customer/orders",
     active: false,
     badge: null,
   },
 
   {
     id: 5,
-    label: "Profile",
-    icon: User,
+    label: "Transfer",
+    icon: Send,
+    path: "/customer/payout",
     active: false,
     badge: null,
   },
 ];
 
 const BottomNavbar = () => {
+
+  const navigate = useNavigate();
 
   return (
     <nav className="bottom-navbar">
@@ -63,6 +71,9 @@ const BottomNavbar = () => {
 
           <button
             key={item.id}
+
+            onClick={() => navigate(item.path)}
+
             className={
               item.active
                 ? "nav-item active"
@@ -75,18 +86,14 @@ const BottomNavbar = () => {
               <Icon size={22} />
 
               {item.badge && (
-
                 <span className="nav-badge">
                   {item.badge}
                 </span>
-
               )}
 
             </div>
 
-            <span>
-              {item.label}
-            </span>
+            <span>{item.label}</span>
 
           </button>
 

@@ -1,5 +1,4 @@
-import "./FavouriteShop.css";
-
+import './FavouriteStoreComponent.css'
 import {
   Heart,
   Plus,

@@ -1,33 +1,72 @@
+import { useState } from "react";
 import React from 'react';
 import TopNavbar from '../../component/navbar/topnavbar';
 import AccountOverview from '../../component/hero/AccountOverview';
 import "./customerDashboard.css";
-import GreetingSection from '../../component/GreetingSection';
-import FavouriteShop from '../../component/FavouriteShop';
-import ShopItems from '../../component/ShopItems';
-import CartSection from '../../component/CartSection';
-import BottomNavbar from '../../component/BottomNavbar'
-function CustomerDashboard() {
+import GreetingSection from './customerComponent/GreetingSection';
+import FavouriteShop from './customerComponent/FavouriteStoreComponent';
+import ShopItems from './customerComponent/ShopItems';
+import CartSection from './customerComponent/CartSection';
+import BottomNavbar from './customerComponent/BottomNavbar'
+import Sidebar from './customerComponent/Sidebar';
+function CustomerDashboard() { const [isSidebarOpen, setIsSidebarOpen] =
+    useState(false);
+
+  /* =========================
+     TOGGLE SIDEBAR
+  ========================= */
+
+  const toggleSidebar = () => {
+    setIsSidebarOpen(!isSidebarOpen);
+  };
+
   return (
-   <div className="dashboard-page">
 
-  <div className="dashboard-container">
+    <div className="dashboard-page">
 
-    <TopNavbar />
+      {/* SIDEBAR */}
 
-    <div className="dashboard-header">
-      <GreetingSection />
+      <Sidebar
+        isOpen={isSidebarOpen}
+        toggleSidebar={toggleSidebar}
+      />
+
+      {/* MAIN */}
+
+      <div className="dashboard-container">
+
+        {/* TOP NAVBAR */}
+
+        <TopNavbar
+          toggleSidebar={toggleSidebar}
+        />
+
+        {/* GREETING */}
+
+        <div className="dashboard-header">
+
+          <GreetingSection />
+
+        </div>
+
+        {/* COMPONENTS */}
+
+        <AccountOverview />
+
+        <FavouriteShop />
+
+        <ShopItems />
+
+        <CartSection />
+
+      </div>
+
+      {/* MOBILE FOOTER */}
+
+      <BottomNavbar />
+
     </div>
-
-    <AccountOverview />
-     <FavouriteShop />
-      <ShopItems/>
-     <CartSection/>
-    <BottomNavbar/>
-  </div>
-
-</div>
-  )
+  );
 }
 
-export default CustomerDashboard
+export default CustomerDashboard;

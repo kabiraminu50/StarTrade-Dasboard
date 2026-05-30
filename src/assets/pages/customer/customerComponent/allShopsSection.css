@@ -1,0 +1,118 @@
+.allShopsSection{
+    width: 100%;
+    padding: 28px 16px 120px;
+}
+
+.sectionHeader{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 20px;
+}
+
+.sectionHeader h2{
+    color: white;
+}
+
+.sectionHeader select{
+    background-color: #111;
+    color: white;
+
+    border: none;
+    outline: none;
+
+    padding: 10px 14px;
+
+    border-radius: 12px;
+}
+
+.shopsList{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.shopItem{
+    background-color: #111;
+
+    border-radius: 18px;
+
+    padding: 16px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 14px;
+}
+
+.shopLogo{
+    width: 60px;
+    height: 60px;
+
+    border-radius: 16px;
+
+    background-color: #F4B400;
+
+    color: black;
+
+    font-size: 22px;
+    font-weight: 700;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.shopDetails{
+    flex: 1;
+}
+
+.shopDetails h3{
+    color: white;
+    margin-bottom: 4px;
+}
+
+.shopDetails p{
+    color: #888;
+    margin-bottom: 6px;
+}
+
+.shopDetails span{
+    color: #ccc;
+    font-size: 14px;
+}
+
+.shopItem button{
+    border: none;
+    outline: none;
+
+    background-color: #F4B400;
+    color: black;
+
+    padding: 12px 18px;
+
+    border-radius: 12px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+@media screen and (max-width: 480px){
+
+    .allShopsSection{
+        padding: 24px 12px 110px;
+    }
+
+    .shopItem{
+        padding: 14px;
+    }
+
+    .shopLogo{
+        width: 52px;
+        height: 52px;
+    }
+
+}
