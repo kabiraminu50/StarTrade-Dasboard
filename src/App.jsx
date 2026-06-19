@@ -2,22 +2,22 @@ import { useState } from "react";
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import Login from "./assets/pages/auth/login";
-import Dashboard from "./assets/pages/businessOwner/dashboard";
-import AddShop from "./assets/pages/businessOwner/addShop";
-import ViewAllGoods from "./assets/pages/businessOwner/viewAllGoods";
-import Transfer from "./assets/pages/businessOwner/transfer";
-import UpdateItem from "./assets/pages/businessOwner/updateItem";
-import ShopFeature from "./assets/pages/businessOwner/shopFeature";
+import Login from "./assets/roledasboards/auth/login";
+import Dashboard from "./assets/roledasboards/businessOwner/dashboard";
+import AddShop from "./assets/roledasboards/businessOwner/addShop";
+import ViewAllGoods from "./assets/roledasboards/businessOwner/viewAllGoods";
+import Transfer from "./assets/roledasboards/businessOwner/transfer";
+import UpdateItem from "./assets/roledasboards/businessOwner/updateItem";
+import ShopFeature from "./assets/roledasboards/businessOwner/shopFeature";
 
-import CustomerDashboard from "./assets/pages/customer/customerDashboard";
-import AllItems from "./assets/pages/customer/cutomerPages/CustomerAllItems";
-import AllStore from "./assets/pages/customer/cutomerPages/AllStore";
-import Cart from "./assets/pages/customer/cutomerPages/Cart";
-import CustomerOrder from "./assets/pages/customer/cutomerPages/CustomerOrder";
-import CustomerProfile from "./assets/pages/customer/cutomerPages/CustomerProfile";
-import PayOut from "./assets/pages/customer/cutomerPages/PayOut";
-import FevoriteStore from "./assets/pages/customer/cutomerPages/FevoriteStore";
+import CustomerDashboard from "./assets/roledasboards/customer/customerDashboard";
+import AllItems from "./assets/roledasboards/customer/cutomerPages/CustomerAllItems";
+import AllStore from "./assets/roledasboards/customer/cutomerPages/AllStore";
+import Cart from "./assets/roledasboards/customer/cutomerPages/Cart";
+import CustomerOrder from "./assets/roledasboards/customer/cutomerPages/CustomerOrder";
+import CustomerProfile from "./assets/roledasboards/customer/cutomerPages/CustomerProfile";
+import PayOut from "./assets/roledasboards/customer/cutomerPages/PayOut";
+import FevoriteStore from "./assets/roledasboards/customer/cutomerPages/FevoriteStore";
 
 function App() {
   const [cart, setCart] = useState([]);

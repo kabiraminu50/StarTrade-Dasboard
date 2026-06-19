@@ -1,6 +1,7 @@
 import "./BottomNavbar.css";
 import { useNavigate } from "react-router-dom";
 
+
 import {
   Logs,
   Store,
@@ -25,7 +26,7 @@ const navItems = [
     icon: Store,
     path: "/customer/all-stores",
     active: false,
-    badge: null,
+    badge: 3,
   },
 
   {
