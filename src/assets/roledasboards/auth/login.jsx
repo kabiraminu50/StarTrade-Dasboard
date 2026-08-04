@@ -8,7 +8,7 @@ import {roleRedirect} from "../utils/roleRedirect"
 const Login = () => {
   const navigate = useNavigate();
 
-  const [username, setUsername] = useState("");
+  const [phoneNumber,setPhoneNumber] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
@@ -21,7 +21,7 @@ const Login = () => {
 
     try {
       const res = await axios.post("http://localhost:8000/api/v1/auth/login", {
-        username,
+        phoneNumber,
         password,        
       });
 
@@ -56,15 +56,16 @@ const role = res.data.user.role;
           </h2>
 
           {error && <p className="error">{error}</p>}
-
+       <label>PHONE NUMBER</label>
           <input
             type="text"
-            placeholder="Username"
+            placeholder="PHONE NUMBER"
             required
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
+            value={phoneNumber}
+            onChange={(e) => setPhoneNumber(e.target.value)}
           />
 
+          <label >PASSWORD</label>
           <input
             type="password"
             placeholder="Password"
