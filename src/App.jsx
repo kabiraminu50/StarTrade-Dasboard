@@ -4,8 +4,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 
 import RmDashboard from "./assets/roledasboards/rmDashboard/rmDashboard";
-
-
+import ScDashboard from "./assets/roledasboards/scDashboard/scDashboard";
+import MrmDashboard from "./assets/roledasboards/MrmDashboard/MrmDashboard";
 
 
 import Login from "./assets/roledasboards/auth/login";
@@ -83,9 +83,10 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        // Rm dashBoardS
+        // staff dashBoardS Routes
       <Route path="/rm/dashboard" element={<RmDashboard />} />
-
+      <Route path="/sc/dashboard" element={<ScDashboard />} />
+      <Route path="/mrm/dashboard" element={<MrmDashboard />} />
 
         <Route path="/" element={<Login />} />
         <Route path="/dashboard" element={<Dashboard />} />

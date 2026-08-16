@@ -1,15 +1,14 @@
 import React, { useEffect, useState } from "react";
 
+import "./MrmDashboard.css";
+
 import TopNavbar from "../ShareComponent/TopNavbar";
-import SideMenu from "../rmDashboard/rmComponent/SideMenu";
+import SideMenu from "./MrmComponent/SideMenu";
 import AccountWalletCard from "../ShareComponent/AccountWalletCard";
-import NetworkOverview from "../rmDashboard/rmComponent/NetworkOverView";
-import DailyEarningChart from "../rmDashboard/rmComponent/DailyEarningChart";
+import NetworkOverview from "./MrmComponent/NetworkOverView";
+import DailyEarningChart from "./MrmComponent/DailyEarningChart";
 
-import "./rmDashboard.css";
-
-
-const RmDashboard = () => {
+const MrmDashboard = () => {
 
   /* =========================================
      SIDEBAR STATE
@@ -20,52 +19,78 @@ const RmDashboard = () => {
 
 
   /* =========================================
-     DASHBOARD STATE
+     MRM DASHBOARD STATE
   ========================================= */
 
-  const [dashboard, setDashboard] = useState({
+  const [dashboard] = useState({
+
     userName: "Kabir Aminu",
+
     accountNumber: "5000 1234 5678",
 
-    walletBalance: 245750,
-    walletChange: 18.6,
+    walletBalance: 325750,
 
-    totalSC: 8,
-    totalBRM: 42,
-    totalCRM: 156,
-    totalCustomers: 2568,
-    totalBO: 1024,
+    walletChange: 21.5,
+
+
+    /* =========================================
+       MRM NETWORK
+    ========================================= */
+
+    totalSC: 6,
+
+    totalBRM: 32,
+
+    totalCRM: 124,
+
+    totalCustomers: 2180,
+
+    totalBO: 845,
+
+
+    /* =========================================
+       DAILY EARNINGS
+    ========================================= */
 
     dailyEarnings: [
+
       {
         date: "7 Aug",
-        amount: 45000,
+        amount: 65000,
       },
+
       {
         date: "8 Aug",
         amount: 95000,
       },
+
       {
         date: "9 Aug",
-        amount: 155000,
+        amount: 145000,
       },
+
       {
         date: "10 Aug",
-        amount: 120000,
+        amount: 125000,
       },
+
       {
         date: "11 Aug",
         amount: 180000,
       },
+
       {
         date: "12 Aug",
         amount: 235000,
       },
+
       {
         date: "13 Aug",
         amount: 290000,
       },
+
     ],
+
   });
 
 
@@ -86,35 +111,47 @@ const RmDashboard = () => {
 
     };
 
+
     document.addEventListener(
       "keydown",
       handleEscape
     );
 
+
     return () => {
+
       document.removeEventListener(
         "keydown",
         handleEscape
       );
+
     };
 
   }, [isSideMenuOpen]);
 
 
   /* =========================================
-     PREVENT BODY SCROLL WHEN MENU OPEN
+     PREVENT BODY SCROLL
+     WHEN SIDEBAR IS OPEN
   ========================================= */
 
   useEffect(() => {
 
     if (isSideMenuOpen) {
+
       document.body.style.overflow = "hidden";
+
     } else {
+
       document.body.style.overflow = "";
+
     }
 
+
     return () => {
+
       document.body.style.overflow = "";
+
     };
 
   }, [isSideMenuOpen]);
@@ -125,7 +162,9 @@ const RmDashboard = () => {
   ========================================= */
 
   const handleNotificationClick = () => {
-    console.log("Open notifications");
+
+    console.log("Open MRM notifications");
+
   };
 
 
@@ -134,7 +173,9 @@ const RmDashboard = () => {
   ========================================= */
 
   const handleProfileClick = () => {
-    console.log("Open RM profile");
+
+    console.log("Open MRM profile");
+
   };
 
 
@@ -143,16 +184,21 @@ const RmDashboard = () => {
   ========================================= */
 
   return (
-    <div className="rm-dashboard">
+
+    <div className="mrm-dashboard">
+
 
       {/* ======================================
           TOP NAVBAR
       ====================================== */}
 
       <TopNavbar
-        userName={dashboard.userName}
 
-        role="Relationship Manager"
+        userName={
+          dashboard.userName
+        }
+
+        role="Master Relationship Manager"
 
         notificationCount={3}
 
@@ -167,6 +213,7 @@ const RmDashboard = () => {
         onProfileClick={
           handleProfileClick
         }
+
       />
 
 
@@ -175,80 +222,123 @@ const RmDashboard = () => {
       ====================================== */}
 
       <SideMenu
-        isOpen={isSideMenuOpen}
+
+        isOpen={
+          isSideMenuOpen
+        }
 
         onClose={() =>
           setIsSideMenuOpen(false)
         }
 
-        userName={dashboard.userName}
+        userName={
+          dashboard.userName
+        }
 
         accountNumber={
           dashboard.accountNumber
         }
+
       />
 
 
       {/* ======================================
-          MAIN CONTENT
+          MAIN DASHBOARD CONTENT
       ====================================== */}
 
-      <main className="dashboard-content">
-
-        {/* Account + Wallet */}
-
-        <AccountWalletCard
-          accountNumber={
-            dashboard.accountNumber
-          }
-
-          walletBalance={
-            dashboard.walletBalance
-          }
-
-          percentageChange={
-            dashboard.walletChange
-          }
-        />
+      <main className="mrm-dashboard-content">
 
 
-        {/* Network */}
+        {/* ====================================
+            ACCOUNT + WALLET
+        ==================================== */}
 
-        <NetworkOverview
-          totalSC={dashboard.totalSC}
+        <section className="mrm-dashboard-section">
 
-          totalBRM={dashboard.totalBRM}
+          <AccountWalletCard
 
-          totalCRM={dashboard.totalCRM}
+            accountNumber={
+              dashboard.accountNumber
+            }
 
-          totalCustomers={
-            dashboard.totalCustomers
-          }
+            walletBalance={
+              dashboard.walletBalance
+            }
 
-          totalBO={dashboard.totalBO}
-        />
+            percentageChange={
+              dashboard.walletChange
+            }
+
+          />
+
+        </section>
 
 
-        {/* Earnings */}
+        {/* ====================================
+            NETWORK OVERVIEW
+        ==================================== */}
 
-        <DailyEarningChart
-          earnings={
-            dashboard.dailyEarnings
-          }
-        />
+        <section className="mrm-dashboard-section">
+
+          <NetworkOverview
+
+            totalSC={
+              dashboard.totalSC
+            }
+
+            totalBRM={
+              dashboard.totalBRM
+            }
+
+            totalCRM={
+              dashboard.totalCRM
+            }
+
+            totalCustomers={
+              dashboard.totalCustomers
+            }
+
+            totalBO={
+              dashboard.totalBO
+            }
+
+          />
+
+        </section>
+
+
+        {/* ====================================
+            DAILY EARNINGS
+        ==================================== */}
+
+        <section className="mrm-dashboard-section">
+
+          <DailyEarningChart
+
+            earnings={
+              dashboard.dailyEarnings
+            }
+
+          />
+
+        </section>
+
 
       </main>
 
 
       {/* ======================================
-          MOBILE BOTTOM NAVIGATION
+          MOBILE BOTTOM SPACE
       ====================================== */}
 
-      
+      <div className="mrm-mobile-bottom-space" />
+
 
     </div>
+
   );
+
 };
 
 
-export default RmDashboard;
+export default MrmDashboard;

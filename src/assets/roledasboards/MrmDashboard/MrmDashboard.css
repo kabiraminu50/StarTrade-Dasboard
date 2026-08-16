@@ -1,9 +1,11 @@
 /* =====================================================
-   SC DASHBOARD
+   MRM DASHBOARD
 ===================================================== */
 
-.sc-dashboard {
+.mrm-dashboard {
+
   width: 100%;
+
   min-height: 100vh;
 
   background:
@@ -22,15 +24,18 @@
   color: #ffffff;
 
   overflow-x: hidden;
+
 }
 
 
 /* =====================================================
-   MAIN CONTENT
+   MAIN DASHBOARD CONTENT
 ===================================================== */
 
-.sc-dashboard-content {
+.mrm-dashboard-content {
+
   width: 100%;
+
   max-width: 1500px;
 
   margin: 0 auto;
@@ -38,48 +43,57 @@
   padding: 32px 40px 60px;
 
   box-sizing: border-box;
+
 }
 
 
 /* =====================================================
-   DASHBOARD SECTIONS
+   DASHBOARD SECTION
 ===================================================== */
 
-.sc-dashboard-section {
+.mrm-dashboard-section {
+
   width: 100%;
+
   margin-bottom: 24px;
+
 }
 
 
-/* Remove margin from final section */
+/* =====================================================
+   REMOVE LAST SECTION MARGIN
+===================================================== */
 
-.sc-dashboard-section:last-child {
+.mrm-dashboard-section:last-child {
+
   margin-bottom: 0;
+
 }
 
 
 /* =====================================================
-   ACCOUNT / WALLET
+   COMPONENT WIDTH
 ===================================================== */
 
-.sc-dashboard-section:first-child {
-  margin-top: 4px;
-}
+.mrm-dashboard-section > * {
 
-
-/* =====================================================
-   COMPONENT SAFETY
-===================================================== */
-
-/*
-   Prevent child components from accidentally
-   overflowing the dashboard.
-*/
-
-.sc-dashboard-section > * {
   width: 100%;
+
   max-width: 100%;
+
   box-sizing: border-box;
+
+}
+
+
+/* =====================================================
+   FIRST SECTION
+===================================================== */
+
+.mrm-dashboard-section:first-child {
+
+  margin-top: 4px;
+
 }
 
 
@@ -89,13 +103,25 @@
 
 @media (max-width: 1024px) {
 
-  .sc-dashboard-content {
-    padding: 28px 24px 50px;
+  .mrm-dashboard-content {
+
+    padding:
+
+      28px
+
+      24px
+
+      50px;
+
   }
 
-  .sc-dashboard-section {
+
+  .mrm-dashboard-section {
+
     margin-bottom: 20px;
+
   }
+
 }
 
 
@@ -105,13 +131,25 @@
 
 @media (max-width: 768px) {
 
-  .sc-dashboard-content {
-    padding: 20px 16px 90px;
+  .mrm-dashboard-content {
+
+    padding:
+
+      20px
+
+      16px
+
+      90px;
+
   }
 
-  .sc-dashboard-section {
+
+  .mrm-dashboard-section {
+
     margin-bottom: 18px;
+
   }
+
 }
 
 
@@ -121,26 +159,42 @@
 
 @media (max-width: 480px) {
 
-  .sc-dashboard-content {
-    padding: 16px 12px 90px;
+  .mrm-dashboard-content {
+
+    padding:
+
+      16px
+
+      12px
+
+      90px;
+
   }
 
-  .sc-dashboard-section {
+
+  .mrm-dashboard-section {
+
     margin-bottom: 16px;
+
   }
+
 }
 
 
 /* =====================================================
-   VERY SMALL SCREEN
+   VERY SMALL DEVICES
 ===================================================== */
 
 @media (max-width: 360px) {
 
-  .sc-dashboard-content {
+  .mrm-dashboard-content {
+
     padding-left: 10px;
+
     padding-right: 10px;
+
   }
+
 }
 
 
@@ -148,15 +202,21 @@
    MOBILE BOTTOM SPACE
 ===================================================== */
 
-.sc-mobile-bottom-space {
+.mrm-mobile-bottom-space {
+
   display: none;
+
 }
 
 
 @media (max-width: 768px) {
 
-  .sc-mobile-bottom-space {
+  .mrm-mobile-bottom-space {
+
     display: block;
+
     height: 70px;
+
   }
+
 }
