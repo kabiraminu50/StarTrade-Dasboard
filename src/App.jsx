@@ -7,6 +7,8 @@ import RmDashboard from "./assets/roledasboards/rmDashboard/rmDashboard";
 import ScDashboard from "./assets/roledasboards/ScDashboard/scDashboard";
 import MrmDashboard from "./assets/roledasboards/MrmDashboard/MrmDashboard";
 import CrmDashboard from "./assets/roledasboards/CrmDashboard/CrmDashboard";
+import SaDashboard from "./assets/roledasboards/SaDashboard/SaDashboard";
+
 
 import Login from "./assets/roledasboards/auth/login";
 import Dashboard from "./assets/roledasboards/businessOwner/dashboard";
@@ -88,6 +90,8 @@ function App() {
         <Route path="/sc/dashboard" element={<ScDashboard />} />
         <Route path="/mrm/dashboard" element={<MrmDashboard />} />
         <Route path="/crm/dashboard" element={<CrmDashboard />} />
+        <Route path="/sa/dashboard" element={<SaDashboard />} />
+
         <Route path="/" element={<Login />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/add-shop" element={<AddShop />} />

@@ -1,0 +1,213 @@
+/* =====================================================
+   SA DASHBOARD
+===================================================== */
+
+.sa-dashboard {
+
+  width: 100%;
+
+  min-height: 100vh;
+
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(35, 35, 45, 0.45),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at bottom left,
+      rgba(20, 20, 28, 0.35),
+      transparent 40%
+    ),
+    #050608;
+
+  color: #ffffff;
+
+  overflow-x: hidden;
+
+}
+
+
+/* =====================================================
+   MAIN DASHBOARD CONTENT
+===================================================== */
+
+.sa-dashboard-content {
+
+  width: 100%;
+
+  max-width: 1500px;
+
+  margin: 0 auto;
+
+  padding: 32px 40px 60px;
+
+  box-sizing: border-box;
+
+}
+
+
+/* =====================================================
+   DASHBOARD SECTION
+===================================================== */
+
+.sa-dashboard-section {
+
+  width: 100%;
+
+  margin-bottom: 24px;
+
+}
+
+
+/* =====================================================
+   LAST SECTION
+===================================================== */
+
+.sa-dashboard-section:last-child {
+
+  margin-bottom: 0;
+
+}
+
+
+/* =====================================================
+   COMPONENT WIDTH SAFETY
+===================================================== */
+
+.sa-dashboard-section > * {
+
+  width: 100%;
+
+  max-width: 100%;
+
+  box-sizing: border-box;
+
+}
+
+
+/* =====================================================
+   FIRST SECTION
+===================================================== */
+
+.sa-dashboard-section:first-child {
+
+  margin-top: 4px;
+
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1024px) {
+
+  .sa-dashboard-content {
+
+    padding:
+      28px
+      24px
+      50px;
+
+  }
+
+
+  .sa-dashboard-section {
+
+    margin-bottom: 20px;
+
+  }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 768px) {
+
+  .sa-dashboard-content {
+
+    padding:
+      20px
+      16px
+      90px;
+
+  }
+
+
+  .sa-dashboard-section {
+
+    margin-bottom: 18px;
+
+  }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 480px) {
+
+  .sa-dashboard-content {
+
+    padding:
+      16px
+      12px
+      90px;
+
+  }
+
+
+  .sa-dashboard-section {
+
+    margin-bottom: 16px;
+
+  }
+
+}
+
+
+/* =====================================================
+   VERY SMALL DEVICES
+===================================================== */
+
+@media (max-width: 360px) {
+
+  .sa-dashboard-content {
+
+    padding-left: 10px;
+
+    padding-right: 10px;
+
+  }
+
+}
+
+
+/* =====================================================
+   MOBILE BOTTOM SPACE
+===================================================== */
+
+.sa-mobile-bottom-space {
+
+  display: none;
+
+}
+
+
+@media (max-width: 768px) {
+
+  .sa-mobile-bottom-space {
+
+    display: block;
+
+    height: 70px;
+
+  }
+
+}
