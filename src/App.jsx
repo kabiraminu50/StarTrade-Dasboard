@@ -2,11 +2,11 @@ import { useState } from "react";
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-
+//staff Dashboard imports
 import RmDashboard from "./assets/roledasboards/rmDashboard/rmDashboard";
-import ScDashboard from "./assets/roledasboards/scDashboard/scDashboard";
+import ScDashboard from "./assets/roledasboards/ScDashboard/scDashboard";
 import MrmDashboard from "./assets/roledasboards/MrmDashboard/MrmDashboard";
-
+import CrmDashboard from "./assets/roledasboards/CrmDashboard/CrmDashboard";
 
 import Login from "./assets/roledasboards/auth/login";
 import Dashboard from "./assets/roledasboards/businessOwner/dashboard";
@@ -84,10 +84,10 @@ function App() {
     <BrowserRouter>
       <Routes>
         // staff dashBoardS Routes
-      <Route path="/rm/dashboard" element={<RmDashboard />} />
-      <Route path="/sc/dashboard" element={<ScDashboard />} />
-      <Route path="/mrm/dashboard" element={<MrmDashboard />} />
-
+        <Route path="/rm/dashboard" element={<RmDashboard />} />
+        <Route path="/sc/dashboard" element={<ScDashboard />} />
+        <Route path="/mrm/dashboard" element={<MrmDashboard />} />
+        <Route path="/crm/dashboard" element={<CrmDashboard />} />
         <Route path="/" element={<Login />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/add-shop" element={<AddShop />} />

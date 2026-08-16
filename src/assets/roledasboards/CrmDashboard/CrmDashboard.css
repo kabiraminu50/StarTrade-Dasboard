@@ -1,0 +1,222 @@
+/* =====================================================
+   CRM DASHBOARD
+===================================================== */
+
+.crm-dashboard {
+
+  width: 100%;
+
+  min-height: 100vh;
+
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(35, 35, 45, 0.45),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at bottom left,
+      rgba(20, 20, 28, 0.35),
+      transparent 40%
+    ),
+    #050608;
+
+  color: #ffffff;
+
+  overflow-x: hidden;
+
+}
+
+
+/* =====================================================
+   MAIN CONTENT
+===================================================== */
+
+.crm-dashboard-content {
+
+  width: 100%;
+
+  max-width: 1500px;
+
+  margin: 0 auto;
+
+  padding: 32px 40px 60px;
+
+  box-sizing: border-box;
+
+}
+
+
+/* =====================================================
+   DASHBOARD SECTION
+===================================================== */
+
+.crm-dashboard-section {
+
+  width: 100%;
+
+  margin-bottom: 24px;
+
+}
+
+
+/* =====================================================
+   LAST SECTION
+===================================================== */
+
+.crm-dashboard-section:last-child {
+
+  margin-bottom: 0;
+
+}
+
+
+/* =====================================================
+   COMPONENT SAFETY
+===================================================== */
+
+.crm-dashboard-section > * {
+
+  width: 100%;
+
+  max-width: 100%;
+
+  box-sizing: border-box;
+
+}
+
+
+/* =====================================================
+   FIRST SECTION
+===================================================== */
+
+.crm-dashboard-section:first-child {
+
+  margin-top: 4px;
+
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1024px) {
+
+  .crm-dashboard-content {
+
+    padding:
+
+      28px
+
+      24px
+
+      50px;
+
+  }
+
+
+  .crm-dashboard-section {
+
+    margin-bottom: 20px;
+
+  }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 768px) {
+
+  .crm-dashboard-content {
+
+    padding:
+
+      20px
+
+      16px
+
+      90px;
+
+  }
+
+
+  .crm-dashboard-section {
+
+    margin-bottom: 18px;
+
+  }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 480px) {
+
+  .crm-dashboard-content {
+
+    padding:
+
+      16px
+
+      12px
+
+      90px;
+
+  }
+
+
+  .crm-dashboard-section {
+
+    margin-bottom: 16px;
+
+  }
+
+}
+
+
+/* =====================================================
+   VERY SMALL DEVICES
+===================================================== */
+
+@media (max-width: 360px) {
+
+  .crm-dashboard-content {
+
+    padding-left: 10px;
+
+    padding-right: 10px;
+
+  }
+
+}
+
+
+/* =====================================================
+   MOBILE BOTTOM SPACE
+===================================================== */
+
+.crm-mobile-bottom-space {
+
+  display: none;
+
+}
+
+
+@media (max-width: 768px) {
+
+  .crm-mobile-bottom-space {
+
+    display: block;
+
+    height: 70px;
+
+  }
+
+}
