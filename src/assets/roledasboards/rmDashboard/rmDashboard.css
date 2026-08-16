@@ -1,0 +1,98 @@
+/* =========================================
+   RM DASHBOARD
+========================================= */
+
+.rm-dashboard {
+  width: 100%;
+  min-height: 100vh;
+
+  box-sizing: border-box;
+
+  color: #ffffff;
+
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(245, 193, 0, 0.035),
+      transparent 30%
+    ),
+    #050608;
+}
+
+
+/* =========================================
+   MAIN CONTENT
+========================================= */
+
+.dashboard-content {
+  width: 100%;
+
+  max-width: 1400px;
+
+  margin: 0 auto;
+
+  box-sizing: border-box;
+
+  padding:
+    20px 25px
+    100px;
+}
+
+
+/* =========================================
+   DESKTOP
+========================================= */
+
+@media (min-width: 769px) {
+
+  .dashboard-content {
+    padding:
+      30px 35px
+      40px;
+  }
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 768px) {
+
+  .dashboard-content {
+    padding:
+      18px
+      18px
+      95px;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 560px) {
+
+  .dashboard-content {
+    padding:
+      15px
+      14px
+      95px;
+  }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 380px) {
+
+  .dashboard-content {
+    padding:
+      13px
+      10px
+      90px;
+  }
+}

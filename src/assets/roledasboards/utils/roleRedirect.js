@@ -6,14 +6,14 @@ export const roleRedirect = (role) => {
     case "BO":
       return "/bo/dashboard";
 
-    case "MARKETER":
-      return "/marketer/dashboard";
+    case "CRM":
+      return "/crm/dashboard";
 
       case "RM":
       return "/rm/dashboard";
 
-    case "BRM":
-      return "/brm/dashboard";
+    case "MRM":
+      return "/mrm/dashboard";
 
     case "SC":
       return "/sc/dashboard";

@@ -2,6 +2,12 @@ import { useState } from "react";
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
+
+import RmDashboard from "./assets/roledasboards/rmDashboard/rmDashboard";
+
+
+
+
 import Login from "./assets/roledasboards/auth/login";
 import Dashboard from "./assets/roledasboards/businessOwner/dashboard";
 import AddShop from "./assets/roledasboards/businessOwner/addShop";
@@ -77,6 +83,10 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
+        // Rm dashBoardS
+      <Route path="/rm/dashboard" element={<RmDashboard />} />
+
+
         <Route path="/" element={<Login />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/add-shop" element={<AddShop />} />

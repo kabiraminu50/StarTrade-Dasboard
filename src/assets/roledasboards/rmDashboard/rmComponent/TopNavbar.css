@@ -1,0 +1,378 @@
+/* =========================================
+   TOP NAVBAR
+========================================= */
+
+.top-navbar {
+  position: relative;
+
+  width: 100%;
+
+  color: #ffffff;
+
+  background:
+    linear-gradient(
+      180deg,
+      #050608 0%,
+      #07080a 100%
+    );
+
+  box-sizing: border-box;
+
+  z-index: 100;
+}
+
+
+/* =========================================
+   NAVBAR TOP
+========================================= */
+
+.navbar-top {
+  position: relative;
+
+  width: 100%;
+  min-height: 70px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding: 0 24px;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   ICON BUTTON
+========================================= */
+
+.navbar-icon-btn {
+  position: relative;
+
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  color: #d5d5d5;
+
+  background: transparent;
+
+  border: none;
+
+  border-radius: 9px;
+
+  cursor: pointer;
+
+  transition:
+    color 0.2s ease,
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.navbar-icon-btn:hover {
+  color: #ffffff;
+
+  background: #151619;
+}
+
+.navbar-icon-btn:active {
+  transform: scale(0.94);
+}
+
+
+/* =========================================
+   LOGO
+========================================= */
+
+.startrade-logo {
+  position: absolute;
+
+  left: 50%;
+
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  color: #ffffff;
+
+  font-size: 23px;
+
+  font-weight: 600;
+
+  white-space: nowrap;
+
+  pointer-events: none;
+}
+
+.logo-star {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  color: #f5c100;
+
+  filter:
+    drop-shadow(
+      0 0 8px
+      rgba(245, 193, 0, 0.15)
+    );
+}
+
+
+/* =========================================
+   RIGHT ACTIONS
+========================================= */
+
+.navbar-actions {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  margin-left: auto;
+}
+
+
+/* =========================================
+   NOTIFICATION
+========================================= */
+
+.notification-btn {
+  position: relative;
+}
+
+.notification-badge {
+  position: absolute;
+
+  top: 1px;
+  right: 0;
+
+  min-width: 17px;
+  height: 17px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 0 4px;
+
+  box-sizing: border-box;
+
+  color: #111111;
+
+  background: #f5c100;
+
+  border: 2px solid #07080a;
+
+  border-radius: 20px;
+
+  font-size: 9px;
+
+  font-weight: 700;
+}
+
+
+/* =========================================
+   PROFILE
+========================================= */
+
+.profile-container {
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  padding: 3px;
+
+  color: #ffffff;
+
+  background: transparent;
+
+  border: none;
+
+  border-radius: 30px;
+
+  cursor: pointer;
+}
+
+.profile-avatar {
+  width: 42px;
+  height: 42px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  color: #171717;
+
+  background: #f5c100;
+
+  border-radius: 50%;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.profile-container:hover .profile-avatar {
+  transform: scale(1.04);
+
+  box-shadow:
+    0 0 15px
+    rgba(245, 193, 0, 0.18);
+}
+
+
+/* =========================================
+   PROFILE INFO
+========================================= */
+
+.profile-info {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-start;
+
+  gap: 2px;
+}
+
+.profile-name {
+  color: #ffffff;
+
+  font-size: 13px;
+
+  font-weight: 500;
+}
+
+.profile-role {
+  color: #888b91;
+
+  font-size: 11px;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 768px) {
+
+  .navbar-top {
+    min-height: 66px;
+
+    padding: 0 18px;
+  }
+
+  .startrade-logo {
+    font-size: 21px;
+  }
+
+  .logo-star svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  .profile-info {
+    display: none;
+  }
+
+  .navbar-actions {
+    gap: 5px;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 560px) {
+
+  .navbar-top {
+    min-height: 64px;
+
+    padding: 0 12px;
+  }
+
+  .navbar-icon-btn {
+    width: 40px;
+    height: 40px;
+  }
+
+  .startrade-logo {
+    font-size: 20px;
+
+    gap: 5px;
+  }
+
+  .logo-star svg {
+    width: 27px;
+    height: 27px;
+  }
+
+  .profile-avatar {
+    width: 40px;
+    height: 40px;
+
+    font-size: 12px;
+  }
+
+  .notification-btn svg {
+    width: 23px;
+    height: 23px;
+  }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 380px) {
+
+  .navbar-top {
+    padding: 0 9px;
+  }
+
+  .startrade-logo {
+    font-size: 18px;
+  }
+
+  .logo-star svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .profile-avatar {
+    width: 37px;
+    height: 37px;
+
+    font-size: 11px;
+  }
+}
