@@ -1,8 +1,10 @@
 import React from "react";
+
 import {
   Users,
   UserRound,
   Store,
+  Truck,
   ArrowRight,
 } from "lucide-react";
 
@@ -18,15 +20,20 @@ const NetworkOverview = ({
   onViewAll,
   onViewDetails,
 }) => {
+  /* =========================================
+     NETWORK ITEMS
+  ========================================= */
+
   const networkItems = [
     {
       id: "da",
       title: "Total DA",
-      subtitle: "",
+      subtitle: "under your SC",
       value: totalDA,
-      icon: Users,
-      color: "purple",
+      icon: Truck,
+      color: "green",
     },
+
     {
       id: "mrm",
       title: "Total MRM",
@@ -35,6 +42,7 @@ const NetworkOverview = ({
       icon: Users,
       color: "blue",
     },
+
     {
       id: "crm",
       title: "Total CRM",
@@ -43,6 +51,7 @@ const NetworkOverview = ({
       icon: Users,
       color: "cyan",
     },
+
     {
       id: "customers",
       title: "Total Customers",
@@ -51,6 +60,7 @@ const NetworkOverview = ({
       icon: UserRound,
       color: "gold",
     },
+
     {
       id: "bo",
       title: "Total BO",
@@ -61,6 +71,10 @@ const NetworkOverview = ({
     },
   ];
 
+  /* =========================================
+     RENDER
+  ========================================= */
+
   return (
     <section className="network-overview">
 
@@ -70,13 +84,27 @@ const NetworkOverview = ({
 
       <div className="network-header">
 
-        <h2>My Network Overview</h2>
+        <div className="network-heading">
+
+          <h2>
+            My Network Overview
+          </h2>
+
+          <p>
+            Overview of your managed network
+          </p>
+
+        </div>
 
         <button
+          type="button"
           className="network-view-all"
           onClick={onViewAll}
         >
-          <span>View All</span>
+          <span>
+            View All
+          </span>
+
           <ArrowRight size={20} />
         </button>
 
@@ -94,12 +122,14 @@ const NetworkOverview = ({
           const Icon = item.icon;
 
           return (
-            <div
+            <article
               className="network-card"
               key={item.id}
             >
 
-              {/* ICON */}
+              {/* =================================
+                  ICON
+              ================================= */}
 
               <div
                 className={`network-icon ${item.color}`}
@@ -111,7 +141,9 @@ const NetworkOverview = ({
               </div>
 
 
-              {/* CONTENT */}
+              {/* =================================
+                  CONTENT
+              ================================= */}
 
               <div className="network-card-content">
 
@@ -121,37 +153,41 @@ const NetworkOverview = ({
                     {item.title}
                   </p>
 
-                  {item.subtitle && (
-                    <p className="network-subtitle">
-                      {item.subtitle}
-                    </p>
-                  )}
+                  <p className="network-subtitle">
+                    {item.subtitle}
+                  </p>
 
                 </div>
 
+
+                {/* VALUE */}
 
                 <h3 className="network-value">
                   {Number(item.value).toLocaleString()}
                 </h3>
 
 
-                {/* DETAILS */}
+                {/* =================================
+                    DETAILS
+                ================================= */}
 
                 <button
+                  type="button"
                   className={`network-details ${item.color}`}
                   onClick={() =>
                     onViewDetails?.(item.id)
                   }
                 >
-                  <span>View details</span>
+                  <span>
+                    View details
+                  </span>
 
                   <ArrowRight size={19} />
-
                 </button>
 
               </div>
 
-            </div>
+            </article>
           );
         })}
 

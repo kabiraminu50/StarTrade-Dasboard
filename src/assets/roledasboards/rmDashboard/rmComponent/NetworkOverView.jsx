@@ -11,9 +11,8 @@ import {
 import "./NetworkOverview.css";
 
 const NetworkOverview = ({
-  totalRM = 0,
-  totalMRM = 0,
   totalSC = 0,
+  totalMRM = 0,
   totalDA = 0,
   totalCRM = 0,
   totalCustomers = 0,
@@ -22,18 +21,16 @@ const NetworkOverview = ({
   onViewAll,
   onViewDetails,
 }) => {
-
   /* =========================================
-     SA NETWORK ITEMS
+     RM NETWORK ITEMS
   ========================================= */
 
   const networkItems = [
-
     {
-      id: "rm",
-      title: "Total RM",
-      subtitle: "Relationship Managers",
-      value: totalRM,
+      id: "sc",
+      title: "Total SC",
+      subtitle: "under your RM",
+      value: totalSC,
       icon: Users,
       color: "purple",
     },
@@ -41,19 +38,10 @@ const NetworkOverview = ({
     {
       id: "mrm",
       title: "Total MRM",
-      subtitle: "under your RM",
+      subtitle: "under your SCs",
       value: totalMRM,
       icon: Users,
       color: "blue",
-    },
-
-    {
-      id: "sc",
-      title: "Total SC",
-      subtitle: "under your MRM",
-      value: totalSC,
-      icon: Users,
-      color: "cyan",
     },
 
     {
@@ -68,19 +56,19 @@ const NetworkOverview = ({
     {
       id: "crm",
       title: "Total CRM",
-      subtitle: "under your SC",
+      subtitle: "under your SCs",
       value: totalCRM,
       icon: Users,
-      color: "gold",
+      color: "cyan",
     },
 
     {
       id: "customers",
       title: "Total Customers",
-      subtitle: "under your CRM",
+      subtitle: "under your CRMs",
       value: totalCustomers,
       icon: UserRound,
-      color: "orange",
+      color: "gold",
     },
 
     {
@@ -91,18 +79,14 @@ const NetworkOverview = ({
       icon: Store,
       color: "pink",
     },
-
   ];
-
 
   /* =========================================
      RENDER
   ========================================= */
 
   return (
-
     <section className="network-overview">
-
 
       {/* =====================================
           HEADER
@@ -117,24 +101,21 @@ const NetworkOverview = ({
           </h2>
 
           <p>
-            Overview of your entire network
+            Overview of your managed network
           </p>
 
         </div>
-
 
         <button
           type="button"
           className="network-view-all"
           onClick={onViewAll}
         >
-
           <span>
             View All
           </span>
 
           <ArrowRight size={20} />
-
         </button>
 
       </div>
@@ -151,12 +132,10 @@ const NetworkOverview = ({
           const Icon = item.icon;
 
           return (
-
-            <div
+            <article
               className="network-card"
               key={item.id}
             >
-
 
               {/* =================================
                   ICON
@@ -165,12 +144,10 @@ const NetworkOverview = ({
               <div
                 className={`network-icon ${item.color}`}
               >
-
                 <Icon
                   size={27}
                   strokeWidth={2}
                 />
-
               </div>
 
 
@@ -196,11 +173,7 @@ const NetworkOverview = ({
                 {/* VALUE */}
 
                 <h3 className="network-value">
-
-                  {Number(
-                    item.value
-                  ).toLocaleString()}
-
+                  {Number(item.value).toLocaleString()}
                 </h3>
 
 
@@ -210,34 +183,26 @@ const NetworkOverview = ({
                   type="button"
                   className={`network-details ${item.color}`}
                   onClick={() =>
-                    onViewDetails?.(
-                      item.id
-                    )
+                    onViewDetails?.(item.id)
                   }
                 >
-
                   <span>
                     View details
                   </span>
 
                   <ArrowRight size={19} />
-
                 </button>
 
               </div>
 
-            </div>
-
+            </article>
           );
-
         })}
 
       </div>
 
     </section>
-
   );
 };
-
 
 export default NetworkOverview;
