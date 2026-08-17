@@ -39,7 +39,7 @@ const MrmDashboard = () => {
 
     totalSC: 6,
 
-    totalBRM: 32,
+    totalMRM: 32,
 
     totalCRM: 124,
 
@@ -286,8 +286,8 @@ const MrmDashboard = () => {
               dashboard.totalSC
             }
 
-            totalBRM={
-              dashboard.totalBRM
+            totalMRM={
+              dashboard.totalMRM
             }
 
             totalCRM={

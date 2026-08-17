@@ -22,6 +22,12 @@
   margin-bottom: 14px;
 }
 
+.network-heading {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
 .network-header h2 {
   margin: 0;
 
@@ -29,6 +35,14 @@
 
   font-size: 20px;
   font-weight: 500;
+}
+
+.network-heading p {
+  margin: 0;
+
+  color: #858a94;
+
+  font-size: 13px;
 }
 
 
@@ -39,6 +53,7 @@
 .network-view-all {
   display: flex;
   align-items: center;
+
   gap: 7px;
 
   padding: 0;
@@ -53,7 +68,7 @@
 
   cursor: pointer;
 
-  transition: all 0.2s ease;
+  transition: gap 0.2s ease;
 }
 
 .network-view-all:hover {
@@ -62,24 +77,35 @@
 
 
 /* =========================================
-   GRID
+   NETWORK GRID
 ========================================= */
 
 .network-grid {
+  width: 100%;
+
   display: grid;
 
+  /*
+    Seven cards.
+
+    Six cards on the first row and
+    one card on the second row.
+  */
+
   grid-template-columns:
-    repeat(2, minmax(0, 1fr));
+    repeat(6, minmax(0, 1fr));
 
   gap: 12px;
 }
 
 
 /* =========================================
-   CARD
+   NETWORK CARD
 ========================================= */
 
 .network-card {
+  min-width: 0;
+
   min-height: 140px;
 
   display: flex;
@@ -125,8 +151,8 @@
 ========================================= */
 
 .network-icon {
-  width: 62px;
-  height: 62px;
+  width: 58px;
+  height: 58px;
 
   flex-shrink: 0;
 
@@ -134,7 +160,7 @@
   align-items: center;
   justify-content: center;
 
-  margin-right: 15px;
+  margin-right: 13px;
 
   border-radius: 50%;
 }
@@ -162,10 +188,22 @@
   background: rgba(0, 213, 213, 0.14);
 }
 
+.network-icon.green {
+  color: #4ade80;
+
+  background: rgba(74, 222, 128, 0.14);
+}
+
 .network-icon.gold {
   color: #f5c100;
 
   background: rgba(245, 193, 0, 0.15);
+}
+
+.network-icon.orange {
+  color: #fb923c;
+
+  background: rgba(251, 146, 60, 0.14);
 }
 
 .network-icon.pink {
@@ -199,18 +237,25 @@
 
   color: #eeeeee;
 
-  font-size: 16px;
+  font-size: 15px;
+
   font-weight: 400;
 
   line-height: 1.4;
+
+  white-space: nowrap;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
 }
 
 .network-subtitle {
   margin: 1px 0 0;
 
-  color: #d0d0d0;
+  color: #a7aab1;
 
-  font-size: 14px;
+  font-size: 12px;
 
   line-height: 1.4;
 }
@@ -221,11 +266,12 @@
 ========================================= */
 
 .network-value {
-  margin: 7px 0 8px;
+  margin: 8px 0;
 
   color: #ffffff;
 
-  font-size: 28px;
+  font-size: 27px;
+
   font-weight: 600;
 
   line-height: 1;
@@ -238,8 +284,12 @@
 
 .network-details {
   display: inline-flex;
+
   align-items: center;
-  gap: 8px;
+
+  width: fit-content;
+
+  gap: 7px;
 
   padding: 0;
 
@@ -247,7 +297,7 @@
 
   border: none;
 
-  font-size: 14px;
+  font-size: 13px;
 
   cursor: pointer;
 
@@ -255,7 +305,7 @@
 }
 
 .network-details:hover {
-  gap: 12px;
+  gap: 11px;
 }
 
 
@@ -275,12 +325,34 @@
   color: #00d5d5;
 }
 
+.network-details.green {
+  color: #4ade80;
+}
+
 .network-details.gold {
   color: #f5c100;
 }
 
+.network-details.orange {
+  color: #fb923c;
+}
+
 .network-details.pink {
   color: #f472b6;
+}
+
+
+/* =========================================
+   LARGE TABLET
+========================================= */
+
+@media (max-width: 1200px) {
+
+  .network-grid {
+    grid-template-columns:
+      repeat(3, minmax(0, 1fr));
+  }
+
 }
 
 
@@ -298,8 +370,19 @@
     font-size: 18px;
   }
 
+  .network-heading p {
+    font-size: 12px;
+  }
+
   .network-view-all {
     font-size: 14px;
+  }
+
+  .network-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 10px;
   }
 
   .network-card {
@@ -312,12 +395,12 @@
     width: 52px;
     height: 52px;
 
-    margin-right: 12px;
+    margin-right: 11px;
   }
 
   .network-icon svg {
-    width: 23px;
-    height: 23px;
+    width: 22px;
+    height: 22px;
   }
 
   .network-title {
@@ -325,7 +408,7 @@
   }
 
   .network-subtitle {
-    font-size: 13px;
+    font-size: 12px;
   }
 
   .network-value {
@@ -333,8 +416,9 @@
   }
 
   .network-details {
-    font-size: 13px;
+    font-size: 12px;
   }
+
 }
 
 
@@ -362,6 +446,7 @@
   .network-value {
     font-size: 25px;
   }
+
 }
 
 
@@ -387,12 +472,12 @@
     width: 48px;
     height: 48px;
 
-    margin-right: 11px;
+    margin-right: 10px;
   }
 
   .network-icon svg {
-    width: 21px;
-    height: 21px;
+    width: 20px;
+    height: 20px;
   }
 
   .network-title {
@@ -400,7 +485,7 @@
   }
 
   .network-subtitle {
-    font-size: 12px;
+    font-size: 11px;
   }
 
   .network-value {
@@ -410,4 +495,5 @@
   .network-details {
     font-size: 12px;
   }
+
 }

@@ -30,7 +30,7 @@ const ScDashboard = () => {
       These values should eventually come
       from your backend API.
     */
-    totalBRM: 12,
+    totalMRM: 12,
     totalCRM: 48,
     totalCustomers: 864,
     totalBO: 315,
@@ -172,7 +172,7 @@ const ScDashboard = () => {
 
         <section className="sc-dashboard-section">
           <NetworkOverview
-            totalBRM={dashboard.totalBRM}
+            totalMRM={dashboard.totalMRM}
             totalCRM={dashboard.totalCRM}
             totalCustomers={dashboard.totalCustomers}
             totalBO={dashboard.totalBO}

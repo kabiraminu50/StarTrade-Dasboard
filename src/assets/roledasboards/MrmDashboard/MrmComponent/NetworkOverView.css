@@ -53,7 +53,7 @@
 
   cursor: pointer;
 
-  transition: all 0.2s ease;
+  transition: gap 0.2s ease;
 }
 
 .network-view-all:hover {
@@ -62,10 +62,12 @@
 
 
 /* =========================================
-   GRID
+   NETWORK GRID
 ========================================= */
 
 .network-grid {
+  width: 100%;
+
   display: grid;
 
   grid-template-columns:
@@ -76,10 +78,11 @@
 
 
 /* =========================================
-   CARD
+   NETWORK CARD
 ========================================= */
 
 .network-card {
+  min-width: 0;
   min-height: 140px;
 
   display: flex;
@@ -141,14 +144,8 @@
 
 
 /* =========================================
-   ICON COLORS
+   DA ICON
 ========================================= */
-
-.network-icon.purple {
-  color: #a855f7;
-
-  background: rgba(168, 85, 247, 0.15);
-}
 
 .network-icon.blue {
   color: #3b82f6;
@@ -156,17 +153,10 @@
   background: rgba(59, 130, 246, 0.15);
 }
 
-.network-icon.cyan {
-  color: #00d5d5;
 
-  background: rgba(0, 213, 213, 0.14);
-}
-
-.network-icon.gold {
-  color: #f5c100;
-
-  background: rgba(245, 193, 0, 0.15);
-}
+/* =========================================
+   BO ICON
+========================================= */
 
 .network-icon.pink {
   color: #f472b6;
@@ -183,6 +173,9 @@
   min-width: 0;
 
   flex: 1;
+
+  display: flex;
+  flex-direction: column;
 }
 
 
@@ -226,6 +219,7 @@
   color: #ffffff;
 
   font-size: 28px;
+
   font-weight: 600;
 
   line-height: 1;
@@ -239,6 +233,9 @@
 .network-details {
   display: inline-flex;
   align-items: center;
+
+  width: fit-content;
+
   gap: 8px;
 
   padding: 0;
@@ -260,24 +257,17 @@
 
 
 /* =========================================
-   DETAIL COLORS
+   DA DETAILS
 ========================================= */
-
-.network-details.purple {
-  color: #a855f7;
-}
 
 .network-details.blue {
   color: #2196f3;
 }
 
-.network-details.cyan {
-  color: #00d5d5;
-}
 
-.network-details.gold {
-  color: #f5c100;
-}
+/* =========================================
+   BO DETAILS
+========================================= */
 
 .network-details.pink {
   color: #f472b6;

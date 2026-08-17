@@ -45,8 +45,8 @@ const SideMenu = ({
       icon: UsersRound,
     },
     {
-      label: "BRM Management",
-      path: "/rm/brm-management",
+      label: "MRM Management",
+      path: "/rm/MRM-management",
       icon: UsersRound,
     },
     {

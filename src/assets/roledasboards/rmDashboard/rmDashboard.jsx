@@ -30,8 +30,8 @@ const RmDashboard = () => {
     walletBalance: 245750,
     walletChange: 18.6,
 
-    totalSC: 8,
-    totalBRM: 42,
+    totalSC: 6,
+    totalMRM: 42,
     totalCRM: 156,
     totalCustomers: 2568,
     totalBO: 1024,
@@ -217,7 +217,7 @@ const RmDashboard = () => {
         <NetworkOverview
           totalSC={dashboard.totalSC}
 
-          totalBRM={dashboard.totalBRM}
+          totalMRM={dashboard.totalMRM}
 
           totalCRM={dashboard.totalCRM}
 

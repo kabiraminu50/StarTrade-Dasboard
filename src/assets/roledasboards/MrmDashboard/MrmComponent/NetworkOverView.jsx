@@ -1,7 +1,7 @@
 import React from "react";
+
 import {
-  Users,
-  UserRound,
+  Truck,
   Store,
   ArrowRight,
 } from "lucide-react";
@@ -9,60 +9,48 @@ import {
 import "./NetworkOverview.css";
 
 const NetworkOverview = ({
-  totalSC = 0,
-  totalBRM = 0,
-  totalCRM = 0,
-  totalCustomers = 0,
+  totalDA = 0,
   totalBO = 0,
 
   onViewAll,
   onViewDetails,
 }) => {
+
+  /* =========================================
+     MRM NETWORK
+  ========================================= */
+
   const networkItems = [
+
     {
-      id: "sc",
-      title: "Total SC",
-      subtitle: "",
-      value: totalSC,
-      icon: Users,
-      color: "purple",
-    },
-    {
-      id: "brm",
-      title: "Total BRM",
-      subtitle: "under your SC",
-      value: totalBRM,
-      icon: Users,
+      id: "da",
+      title: "Total DA",
+      subtitle: "under your MRM",
+      value: totalDA,
+      icon: Truck,
       color: "blue",
     },
-    {
-      id: "crm",
-      title: "Total CRM",
-      subtitle: "under your SC",
-      value: totalCRM,
-      icon: Users,
-      color: "cyan",
-    },
-    {
-      id: "customers",
-      title: "Total Customers",
-      subtitle: "under your CRM",
-      value: totalCustomers,
-      icon: UserRound,
-      color: "gold",
-    },
+
     {
       id: "bo",
       title: "Total BO",
-      subtitle: "under your BRMs",
+      subtitle: "under your MRM",
       value: totalBO,
       icon: Store,
       color: "pink",
     },
+
   ];
 
+
+  /* =========================================
+     RENDER
+  ========================================= */
+
   return (
+
     <section className="network-overview">
+
 
       {/* =====================================
           HEADER
@@ -70,14 +58,31 @@ const NetworkOverview = ({
 
       <div className="network-header">
 
-        <h2>My Network Overview</h2>
+        <div className="network-heading">
+
+          <h2>
+            My Network Overview
+          </h2>
+
+          <p>
+            Overview of your managed network
+          </p>
+
+        </div>
+
 
         <button
+          type="button"
           className="network-view-all"
           onClick={onViewAll}
         >
-          <span>View All</span>
+
+          <span>
+            View All
+          </span>
+
           <ArrowRight size={20} />
+
         </button>
 
       </div>
@@ -87,33 +92,44 @@ const NetworkOverview = ({
           NETWORK GRID
       ===================================== */}
 
-      <div className="network-grid">
+      <div className="network-grid mrm-network-grid">
 
         {networkItems.map((item) => {
 
           const Icon = item.icon;
 
           return (
+
             <div
               className="network-card"
               key={item.id}
             >
 
-              {/* ICON */}
+
+              {/* =================================
+                  ICON
+              ================================= */}
 
               <div
                 className={`network-icon ${item.color}`}
               >
+
                 <Icon
                   size={27}
                   strokeWidth={2}
                 />
+
               </div>
 
 
-              {/* CONTENT */}
+              {/* =================================
+                  CONTENT
+              ================================= */}
 
               <div className="network-card-content">
+
+
+                {/* TITLE */}
 
                 <div className="network-title-wrapper">
 
@@ -121,44 +137,62 @@ const NetworkOverview = ({
                     {item.title}
                   </p>
 
-                  {item.subtitle && (
-                    <p className="network-subtitle">
-                      {item.subtitle}
-                    </p>
-                  )}
+                  <p className="network-subtitle">
+                    {item.subtitle}
+                  </p>
 
                 </div>
 
 
+                {/* VALUE */}
+
                 <h3 className="network-value">
-                  {Number(item.value).toLocaleString()}
+
+                  {Number(
+                    item.value
+                  ).toLocaleString()}
+
                 </h3>
 
 
-                {/* DETAILS */}
+                {/* =================================
+                    DETAILS
+                ================================= */}
 
                 <button
+                  type="button"
                   className={`network-details ${item.color}`}
                   onClick={() =>
-                    onViewDetails?.(item.id)
+                    onViewDetails?.(
+                      item.id
+                    )
                   }
                 >
-                  <span>View details</span>
 
-                  <ArrowRight size={19} />
+                  <span>
+                    View details
+                  </span>
+
+                  <ArrowRight
+                    size={19}
+                  />
 
                 </button>
 
               </div>
 
             </div>
+
           );
+
         })}
 
       </div>
 
     </section>
+
   );
 };
+
 
 export default NetworkOverview;

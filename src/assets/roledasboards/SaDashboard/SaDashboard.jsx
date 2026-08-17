@@ -39,12 +39,15 @@ const SaDashboard = () => {
        Keep these values aligned with the
        actual SA hierarchy.
     ========================================= */
+    totalRM: 1,
 
     totalMRM: 4,
 
     totalSC: 18,
 
-    totalBRM: 86,
+    totalMRM: 86,
+
+    totalDA: 234,
 
     totalCRM: 310,
 
@@ -287,33 +290,15 @@ const SaDashboard = () => {
         <section className="sa-dashboard-section">
 
           <NetworkOverview
-
-            totalMRM={
-              dashboard.totalMRM
-            }
-
-            totalSC={
-              dashboard.totalSC
-            }
-
-            totalBRM={
-              dashboard.totalBRM
-            }
-
-            totalCRM={
-              dashboard.totalCRM
-            }
-
-            totalCustomers={
-              dashboard.totalCustomers
-            }
-
-            totalBO={
-              dashboard.totalBO
-            }
-
-          />
-
+  totalRM={dashboard.totalRM}
+  totalMRM={dashboard.totalMRM}
+  totalSC={dashboard.totalSC}
+  totalMRM={dashboard.totalMRM}
+  totalCRM={dashboard.totalCRM}
+  totalDA={dashboard.totalDA}
+  totalCustomers={dashboard.totalCustomers}
+  totalBO={dashboard.totalBO}
+/>
         </section>
 
 

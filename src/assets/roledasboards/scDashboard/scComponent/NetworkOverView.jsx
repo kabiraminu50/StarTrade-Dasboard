@@ -9,8 +9,8 @@ import {
 import "./NetworkOverview.css";
 
 const NetworkOverview = ({
-  totalSC = 0,
-  totalBRM = 0,
+  totalDA = 0,
+  totalMRM = 0,
   totalCRM = 0,
   totalCustomers = 0,
   totalBO = 0,
@@ -20,18 +20,18 @@ const NetworkOverview = ({
 }) => {
   const networkItems = [
     {
-      id: "sc",
-      title: "Total SC",
+      id: "da",
+      title: "Total DA",
       subtitle: "",
-      value: totalSC,
+      value: totalDA,
       icon: Users,
       color: "purple",
     },
     {
-      id: "brm",
-      title: "Total BRM",
+      id: "mrm",
+      title: "Total MRM",
       subtitle: "under your SC",
-      value: totalBRM,
+      value: totalMRM,
       icon: Users,
       color: "blue",
     },
@@ -54,7 +54,7 @@ const NetworkOverview = ({
     {
       id: "bo",
       title: "Total BO",
-      subtitle: "under your BRMs",
+      subtitle: "under your MRMs",
       value: totalBO,
       icon: Store,
       color: "pink",
