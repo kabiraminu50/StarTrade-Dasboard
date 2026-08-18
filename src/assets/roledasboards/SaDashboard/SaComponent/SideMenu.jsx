@@ -7,6 +7,7 @@ import {
   UsersRound,
   UserRound,
   Store,
+   UserRoundPlus,
   ContactRound,
   CircleDollarSign,
   ArrowLeftRight,
@@ -35,9 +36,9 @@ const SideMenu = ({
       icon: LayoutDashboard,
     },
     {
-      label: "My Structure",
-      path: "/rm/network",
-      icon: Network,
+      label: "Onboarding",
+      path: "/staff-onboarding",
+      icon:  UserRoundPlus,
     },
     {
       label: "SC Management",

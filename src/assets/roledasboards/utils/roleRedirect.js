@@ -22,7 +22,7 @@ export const roleRedirect = (role) => {
       return "/da/dashboard";
 
     case "SA":
-      return "dashboard";
+      return "/sa/dashboard";
 
     default:
       return "/login";

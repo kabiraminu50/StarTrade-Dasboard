@@ -1,0 +1,789 @@
+/* =========================================
+   STAFF ONBOARDING
+========================================= */
+
+.staff-onboarding {
+  width: 100%;
+  min-height: 100vh;
+
+  box-sizing: border-box;
+
+  padding: 35px;
+
+  color: #ffffff;
+
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(245, 193, 0, 0.045),
+      transparent 30%
+    ),
+    #050608;
+}
+
+
+/* =========================================
+   WRAPPER
+========================================= */
+
+.onboarding-wrapper {
+  width: 100%;
+  max-width: 1000px;
+
+  margin: 0 auto;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.onboarding-header {
+  margin-bottom: 30px;
+}
+
+.brand-label,
+.step-label,
+.success-label {
+  color: #f5c100;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  letter-spacing: 1.5px;
+}
+
+.onboarding-header h1 {
+  margin: 7px 0 5px;
+
+  color: #ffffff;
+
+  font-size: 30px;
+
+  font-weight: 600;
+}
+
+.onboarding-header p {
+  margin: 0;
+
+  color: #858a94;
+
+  font-size: 14px;
+}
+
+
+/* =========================================
+   PROGRESS
+========================================= */
+
+.onboarding-progress {
+  display: flex;
+
+  align-items: center;
+
+  width: 100%;
+
+  margin-bottom: 25px;
+}
+
+.progress-step {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  gap: 5px;
+
+  flex-shrink: 0;
+}
+
+.progress-step span {
+  width: 32px;
+  height: 32px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #292b30;
+
+  border-radius: 50%;
+
+  color: #777b84;
+
+  background: #0b0c0f;
+
+  font-size: 13px;
+}
+
+.progress-step small {
+  color: #777b84;
+
+  font-size: 11px;
+}
+
+.progress-step.active span {
+  color: #050608;
+
+  background: #f5c100;
+
+  border-color: #f5c100;
+}
+
+.progress-step.active small {
+  color: #f5c100;
+}
+
+.progress-line {
+  height: 1px;
+
+  flex: 1;
+
+  margin: 0 8px;
+
+  background: #292b30;
+}
+
+.progress-line.active {
+  background: #f5c100;
+}
+
+
+/* =========================================
+   CARD
+========================================= */
+
+.onboarding-card {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding: 30px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #111216,
+      #0b0c0f
+    );
+
+  border: 1px solid #292b30;
+
+  border-radius: 18px;
+}
+
+
+/* =========================================
+   STEP HEADING
+========================================= */
+
+.step-heading {
+  margin-bottom: 25px;
+}
+
+.step-heading h2 {
+  margin: 6px 0;
+
+  color: #ffffff;
+
+  font-size: 22px;
+
+  font-weight: 500;
+}
+
+.step-heading p {
+  margin: 0;
+
+  color: #858a94;
+
+  font-size: 14px;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================
+   ROLE GRID
+========================================= */
+
+.role-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 12px;
+}
+
+.role-card {
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  min-height: 85px;
+
+  padding: 16px;
+
+  text-align: left;
+
+  color: #ffffff;
+
+  background: #0b0c0f;
+
+  border: 1px solid #292b30;
+
+  border-radius: 14px;
+
+  cursor: pointer;
+
+  transition:
+    border-color 0.2s ease,
+    transform 0.2s ease,
+    background 0.2s ease;
+}
+
+.role-card:hover {
+  transform: translateY(-2px);
+
+  border-color: #44464d;
+
+  background: #111216;
+}
+
+.role-card.active {
+  border-color: #f5c100;
+
+  background:
+    rgba(245, 193, 0, 0.05);
+}
+
+.role-icon {
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  color: #f5c100;
+
+  background:
+    rgba(245, 193, 0, 0.12);
+
+  border-radius: 12px;
+}
+
+.role-info {
+  min-width: 0;
+
+  flex: 1;
+}
+
+.role-info h3 {
+  margin: 0 0 4px;
+
+  color: #ffffff;
+
+  font-size: 15px;
+
+  font-weight: 500;
+}
+
+.role-info p {
+  margin: 0;
+
+  color: #777b84;
+
+  font-size: 12px;
+}
+
+.role-arrow {
+  color: #777b84;
+
+  flex-shrink: 0;
+}
+
+
+/* =========================================
+   FORM
+========================================= */
+
+.onboarding-form {
+  width: 100%;
+  max-width: 650px;
+}
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  margin-bottom: 7px;
+
+  color: #d9d9dc;
+
+  font-size: 13px;
+}
+
+.optional {
+  color: #777b84;
+
+  font-size: 11px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding: 13px 14px;
+
+  color: #ffffff;
+
+  background: #08090b;
+
+  border: 1px solid #292b30;
+
+  border-radius: 10px;
+
+  outline: none;
+
+  font-family: inherit;
+
+  font-size: 14px;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #f5c100;
+
+  box-shadow:
+    0 0 0 3px
+    rgba(245, 193, 0, 0.08);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #555962;
+}
+
+
+/* =========================================
+   TWO COLUMN FORM
+========================================= */
+
+.form-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 14px;
+}
+
+
+/* =========================================
+   INPUT ICON
+========================================= */
+
+.input-with-icon {
+  position: relative;
+}
+
+.input-with-icon svg {
+  position: absolute;
+
+  left: 14px;
+
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  color: #777b84;
+}
+
+.input-with-icon input {
+  padding-left: 43px;
+}
+
+
+/* =========================================
+   SELFIE UPLOAD
+========================================= */
+
+.selfie-upload {
+  width: 180px;
+  height: 180px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  overflow: hidden;
+
+  color: #777b84;
+
+  background: #08090b;
+
+  border: 1px dashed #3b3d43;
+
+  border-radius: 14px;
+
+  cursor: pointer;
+
+  transition:
+    border-color 0.2s ease;
+}
+
+.selfie-upload:hover {
+  border-color: #f5c100;
+}
+
+.selfie-upload img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.selfie-upload span {
+  color: #d0d0d0;
+
+  font-size: 13px;
+}
+
+.selfie-upload small {
+  color: #555962;
+
+  font-size: 11px;
+}
+
+
+/* =========================================
+   DOCUMENT UPLOAD
+========================================= */
+
+.document-upload {
+  min-height: 70px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 14px;
+
+  box-sizing: border-box;
+
+  color: #777b84;
+
+  background: #08090b;
+
+  border: 1px dashed #3b3d43;
+
+  border-radius: 10px;
+
+  cursor: pointer;
+}
+
+.document-upload:hover {
+  border-color: #f5c100;
+}
+
+.document-upload span {
+  color: #cfd1d5;
+
+  font-size: 13px;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+}
+
+
+/* =========================================
+   VERIFICATION ICON
+========================================= */
+
+.verification-icon {
+  width: 70px;
+  height: 70px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 20px;
+
+  color: #f5c100;
+
+  background:
+    rgba(245, 193, 0, 0.1);
+
+  border-radius: 50%;
+}
+
+
+/* =========================================
+   PRIMARY BUTTON
+========================================= */
+
+.primary-button {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  min-width: 170px;
+
+  margin-top: 25px;
+
+  padding: 13px 20px;
+
+  color: #050608;
+
+  background: #f5c100;
+
+  border: none;
+
+  border-radius: 10px;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.primary-button:hover {
+  transform: translateY(-1px);
+}
+
+.primary-button:disabled {
+  opacity: 0.55;
+
+  cursor: not-allowed;
+
+  transform: none;
+}
+
+
+/* =========================================
+   ERROR
+========================================= */
+
+.onboarding-error {
+  margin-bottom: 15px;
+
+  padding: 12px 14px;
+
+  color: #ff7b7b;
+
+  background:
+    rgba(255, 70, 70, 0.08);
+
+  border: 1px solid
+    rgba(255, 70, 70, 0.2);
+
+  border-radius: 10px;
+
+  font-size: 13px;
+}
+
+
+/* =========================================
+   SUCCESS
+========================================= */
+
+.onboarding-success {
+  max-width: 550px;
+
+  margin: 20px auto;
+
+  text-align: center;
+}
+
+.success-icon {
+  width: 75px;
+  height: 75px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  margin: 0 auto 20px;
+
+  color: #050608;
+
+  background: #4ade80;
+
+  border-radius: 50%;
+
+  font-size: 36px;
+}
+
+.onboarding-success h2 {
+  margin: 10px 0;
+
+  color: #ffffff;
+
+  font-size: 24px;
+}
+
+.onboarding-success p {
+  margin: 7px 0;
+
+  color: #858a94;
+
+  font-size: 14px;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 768px) {
+
+  .staff-onboarding {
+    padding: 22px 18px 100px;
+  }
+
+  .onboarding-header h1 {
+    font-size: 26px;
+  }
+
+  .onboarding-card {
+    padding: 22px;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 560px) {
+
+  .staff-onboarding {
+    padding: 18px 14px 100px;
+  }
+
+  .onboarding-header {
+    margin-bottom: 22px;
+  }
+
+  .onboarding-header h1 {
+    font-size: 23px;
+  }
+
+  .onboarding-card {
+    padding: 18px 15px;
+  }
+
+  .role-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .progress-step small {
+    display: none;
+  }
+
+  .progress-step span {
+    width: 29px;
+    height: 29px;
+
+    font-size: 12px;
+  }
+
+  .progress-line {
+    margin: 0 5px;
+  }
+
+  .step-heading h2 {
+    font-size: 20px;
+  }
+
+  .selfie-upload {
+    width: 150px;
+    height: 150px;
+  }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 380px) {
+
+  .staff-onboarding {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .onboarding-card {
+    padding: 16px 13px;
+  }
+
+  .onboarding-header h1 {
+    font-size: 21px;
+  }
+
+  .role-card {
+    min-height: 75px;
+
+    padding: 12px;
+  }
+
+  .role-icon {
+    width: 43px;
+    height: 43px;
+  }
+
+}

@@ -1,7 +1,8 @@
 import { useState } from "react";
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-
+//staffOnboarding imports
+import StaffOnboarding from "./assets/staffOnboarding/StaffOnboarding";
 //staff Dashboard imports
 import RmDashboard from "./assets/roledasboards/rmDashboard/rmDashboard";
 import ScDashboard from "./assets/roledasboards/ScDashboard/scDashboard";
@@ -85,6 +86,9 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
+        //staffOnboarding Routes
+        <Route path="/staff-onboarding" element={<StaffOnboarding />} />
+
         // staff dashBoardS Routes
         <Route path="/rm/dashboard" element={<RmDashboard />} />
         <Route path="/sc/dashboard" element={<ScDashboard />} />
