@@ -30,12 +30,14 @@ const HomeAddress = ({
     landmark: "",
   });
 
-  const [utilityBill, setUtilityBill] =
-    useState(null);
+  const [utilityBill, setUtilityBill] = useState(null);
 
-  const [loading, setLoading] =
-    useState(false);
+  const [loading, setLoading] = useState(false);
 
+
+  /* =========================================
+     HANDLE INPUT CHANGE
+  ========================================= */
 
   const handleChange = (event) => {
 
@@ -48,9 +50,12 @@ const HomeAddress = ({
       ...prev,
       [name]: value,
     }));
-
   };
 
+
+  /* =========================================
+     HANDLE SUBMIT
+  ========================================= */
 
   const handleSubmit = async (event) => {
 
@@ -58,6 +63,24 @@ const HomeAddress = ({
 
     onError?.("");
 
+
+    /* =========================================
+       VALIDATE ONBOARDING ID
+    ========================================= */
+
+    if (!onboardingId) {
+
+      onError?.(
+        "Onboarding ID is missing."
+      );
+
+      return;
+    }
+
+
+    /* =========================================
+       VALIDATE UTILITY BILL
+    ========================================= */
 
     if (!utilityBill) {
 
@@ -74,33 +97,49 @@ const HomeAddress = ({
       setLoading(true);
 
 
-      const data =
-        await submitHomeAddress({
+      console.log(
+        "SUBMITTING HOME ADDRESS FOR:",
+        onboardingId
+      );
 
-          onboardingId,
 
-          ...form,
+      /* =========================================
+         SUBMIT HOME ADDRESS
+      ========================================= */
 
-          utilityBill,
+      const data = await submitHomeAddress({
+        onboardingId,
+        ...form,
+        utilityBill,
+      });
 
-        });
 
+      /* =========================================
+         SUCCESS
+      ========================================= */
 
       onSuccess?.(data);
 
+
     } catch (error) {
+
+      console.error(
+        "HOME ADDRESS SUBMISSION ERROR:",
+        error.response?.data || error.message
+      );
+
 
       onError?.(
         error.response?.data?.message ||
         "Failed to save home address."
       );
 
+
     } finally {
 
       setLoading(false);
 
     }
-
   };
 
 
@@ -110,6 +149,10 @@ const HomeAddress = ({
       className="onboarding-form"
       onSubmit={handleSubmit}
     >
+
+      {/* =========================================
+          STEP HEADING
+      ========================================= */}
 
       <div className="step-heading">
 
@@ -128,6 +171,10 @@ const HomeAddress = ({
 
       </div>
 
+
+      {/* =========================================
+          STATE + LGA
+      ========================================= */}
 
       <div className="form-grid">
 
@@ -165,6 +212,10 @@ const HomeAddress = ({
       </div>
 
 
+      {/* =========================================
+          STREET ADDRESS
+      ========================================= */}
+
       <div className="form-group">
 
         <label>
@@ -181,6 +232,10 @@ const HomeAddress = ({
       </div>
 
 
+      {/* =========================================
+          HOUSE NUMBER
+      ========================================= */}
+
       <div className="form-group">
 
         <label>
@@ -196,6 +251,10 @@ const HomeAddress = ({
 
       </div>
 
+
+      {/* =========================================
+          HOME ADDRESS
+      ========================================= */}
 
       <div className="form-group">
 
@@ -214,13 +273,20 @@ const HomeAddress = ({
       </div>
 
 
+      {/* =========================================
+          LANDMARK
+      ========================================= */}
+
       <div className="form-group">
 
         <label>
+
           Landmark
+
           <span className="optional">
             Optional
           </span>
+
         </label>
 
         <input
@@ -232,6 +298,10 @@ const HomeAddress = ({
 
       </div>
 
+
+      {/* =========================================
+          UTILITY BILL
+      ========================================= */}
 
       <div className="form-group">
 
@@ -249,10 +319,12 @@ const HomeAddress = ({
           <Upload size={25} />
 
           <span>
+
             {utilityBill
               ? utilityBill.name
               : "Upload utility bill"
             }
+
           </span>
 
         </div>
@@ -263,15 +335,24 @@ const HomeAddress = ({
           type="file"
           accept="image/*,.pdf"
           hidden
-          onChange={(e) =>
-            setUtilityBill(
-              e.target.files?.[0]
-            )
-          }
+          onChange={(event) => {
+
+            const file =
+              event.target.files?.[0];
+
+            if (file) {
+              setUtilityBill(file);
+            }
+
+          }}
         />
 
       </div>
 
+
+      {/* =========================================
+          CONTINUE BUTTON
+      ========================================= */}
 
       <button
         type="submit"
@@ -291,8 +372,8 @@ const HomeAddress = ({
       </button>
 
     </form>
-
   );
 };
+
 
 export default HomeAddress;

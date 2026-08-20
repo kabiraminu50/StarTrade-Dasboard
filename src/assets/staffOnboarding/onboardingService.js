@@ -1,52 +1,49 @@
 import axios from "axios";
 
+const API_URL = import.meta.env.VITE_API_URL;
 
-const API_URL =
-  import.meta.env.VITE_API_URL;
+/* =========================================
+   DEBUG
+========================================= */
 
+console.log("ONBOARDING API URL:", API_URL);
 
 /* =========================================
    AUTH CONFIG
 ========================================= */
 
 const getAuthConfig = () => {
-
-  const token =
-    localStorage.getItem("token");
+  const token = localStorage.getItem("token");
 
   if (!token) {
-    throw new Error(
-      "Authentication token not found."
-    );
+    throw new Error("Authentication token not found.");
   }
 
   return {
     headers: {
-      Authorization:
-        `Bearer ${token}`,
+      Authorization: `Bearer ${token}`,
     },
-
     withCredentials: true,
   };
 };
-
 
 /* =========================================
    GET ONBOARDING PERMISSIONS
 ========================================= */
 
-export const getOnboardingPermissions =
-  async () => {
+export const getOnboardingPermissions = async () => {
+  const url =
+    `${API_URL}/staff-onboarding/permissions`;
 
-    const response =
-      await axios.get(
-        `${API_URL}/permissions`,
-        getAuthConfig()
-      );
+  console.log("GET ONBOARDING PERMISSIONS:", url);
 
-    return response.data;
-  };
+  const response = await axios.get(
+    url,
+    getAuthConfig()
+  );
 
+  return response.data;
+};
 
 /* =========================================
    VERIFY NIN
@@ -58,48 +55,26 @@ export const verifyNIN = async ({
   role,
   image,
 }) => {
+  const formData = new FormData();
 
-  const formData =
-    new FormData();
+  formData.append("nin", nin);
+  formData.append("date_of_birth", date_of_birth);
+  formData.append("role", role);
+  formData.append("image", image);
 
-  formData.append(
-    "nin",
-    nin
+  const url =
+    `${API_URL}/verifynin/prembly`;
+
+  console.log("VERIFY NIN URL:", url);
+
+  const response = await axios.post(
+    url,
+    formData,
+    getAuthConfig()
   );
-
-  formData.append(
-    "date_of_birth",
-    date_of_birth
-  );
-
-  formData.append(
-    "role",
-    role
-  );
-
-  formData.append(
-    "image",
-    image
-  );
-
-
-  const response =
-    await axios.post(
-
-      `${API_URL}/prembly`,
-
-      formData,
-
-      {
-        ...getAuthConfig(),
-      }
-
-    );
-
 
   return response.data;
 };
-
 
 /* =========================================
    VERIFY BVN
@@ -109,122 +84,82 @@ export const verifyBVN = async ({
   onboardingId,
   bvn,
 }) => {
+  const url =
+    `${API_URL}/bvn/verify-bvn/${onboardingId}`;
 
-  const response =
-    await axios.post(
+  console.log("VERIFY BVN URL:", url);
 
-      `${API_URL}/verify-bvn/${onboardingId}`,
-
-      {
-        bvn,
-      },
-
-      getAuthConfig()
-
-    );
-
+  const response = await axios.post(
+    url,
+    {
+      bvn,
+    },
+    getAuthConfig()
+  );
 
   return response.data;
 };
-
 
 /* =========================================
    HOME ADDRESS
 ========================================= */
 
-export const submitHomeAddress =
-  async ({
-    onboardingId,
-    state,
-    lga,
-    streetAddress,
-    houseNumber,
-    homeAddress,
-    landmark,
-    utilityBill,
-  }) => {
+export const submitHomeAddress = async ({
+  onboardingId,
+  state,
+  lga,
+  streetAddress,
+  houseNumber,
+  homeAddress,
+  landmark,
+  utilityBill,
+}) => {
+  const formData = new FormData();
 
-    const formData =
-      new FormData();
+  formData.append("state", state);
+  formData.append("lga", lga);
+  formData.append("streetAddress", streetAddress);
+  formData.append("houseNumber", houseNumber);
+  formData.append("homeAddress", homeAddress);
+  formData.append("landmark", landmark || "");
+  formData.append("image", utilityBill);
 
+  const url =
+    `${API_URL}/update/home/homeaddressupdate/${onboardingId}`;
 
-    formData.append(
-      "state",
-      state
-    );
+  console.log("HOME ADDRESS URL:", url);
 
-    formData.append(
-      "lga",
-      lga
-    );
+  const response = await axios.patch(
+    url,
+    formData,
+    getAuthConfig()
+  );
 
-    formData.append(
-      "streetAddress",
-      streetAddress
-    );
-
-    formData.append(
-      "houseNumber",
-      houseNumber
-    );
-
-    formData.append(
-      "homeAddress",
-      homeAddress
-    );
-
-    formData.append(
-      "landmark",
-      landmark || ""
-    );
-
-    formData.append(
-      "image",
-      utilityBill
-    );
-
-
-    const response =
-      await axios.patch(
-
-        `${API_URL}/homeaddressupdate/${onboardingId}`,
-
-        formData,
-
-        getAuthConfig()
-
-      );
-
-
-    return response.data;
-  };
-
+  return response.data;
+};
 
 /* =========================================
    CONTACT DETAILS
 ========================================= */
 
-export const submitContactDetails =
-  async ({
-    onboardingId,
-    email,
-    phoneNumber,
-  }) => {
+export const submitContactDetails = async ({
+  onboardingId,
+  email,
+  phoneNumber,
+}) => {
+  const url =
+    `${API_URL}/update/contactdetails/onboarding/${onboardingId}`;
 
-    const response =
-      await axios.patch(
+  console.log("CONTACT DETAILS URL:", url);
 
-        `${API_URL}/onboarding/${onboardingId}`,
+  const response = await axios.patch(
+    url,
+    {
+      email,
+      phoneNumber,
+    },
+    getAuthConfig()
+  );
 
-        {
-          email,
-          phoneNumber,
-        },
-
-        getAuthConfig()
-
-      );
-
-
-    return response.data;
-  };
+  return response.data;
+};
