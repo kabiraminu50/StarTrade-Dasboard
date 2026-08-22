@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 
 import TopNavbar from "../ShareComponent/TopNavbar";
-import SideMenu from "../rmDashboard/rmComponent/SideMenu";
+import SideMenu from "./rmComponent/SideMenu";
 import AccountWalletCard from "../ShareComponent/AccountWalletCard";
-import NetworkOverview from "../rmDashboard/rmComponent/NetworkOverView";
-import DailyEarningChart from "../rmDashboard/rmComponent/DailyEarningChart";
+import NetworkOverview from "./rmComponent/NetworkOverView";
+import DailyEarningChart from "./rmComponent/DailyEarningChart";
 
-import "./rmDashboard.css";
+import "./RmDashboard.css";
 
 
 const RmDashboard = () => {

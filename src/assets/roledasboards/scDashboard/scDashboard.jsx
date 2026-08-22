@@ -6,7 +6,7 @@ import AccountWalletCard from "../ShareComponent/AccountWalletCard";
 import NetworkOverview from "./scComponent/NetworkOverView";
 import DailyEarningChart from "./scComponent/DailyEarningChart";
 
-import "./scDashboard.css";
+import "./ScDashboard.css";
 
 const ScDashboard = () => {
   /* =========================================
