@@ -41,8 +41,6 @@ const SaDashboard = () => {
     ========================================= */
     totalRM: 1,
 
-    totalMRM: 4,
-
     totalSC: 18,
 
     totalMRM: 86,
@@ -291,7 +289,6 @@ const SaDashboard = () => {
 
           <NetworkOverview
   totalRM={dashboard.totalRM}
-  totalMRM={dashboard.totalMRM}
   totalSC={dashboard.totalSC}
   totalMRM={dashboard.totalMRM}
   totalCRM={dashboard.totalCRM}
