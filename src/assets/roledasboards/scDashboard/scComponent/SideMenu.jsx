@@ -4,6 +4,7 @@ import { NavLink } from "react-router-dom";
 import {
   LayoutDashboard,
   Network,
+  UserRoundPlus,
   UsersRound,
   UserRound,
   Store,
@@ -35,9 +36,9 @@ const SideMenu = ({
       icon: LayoutDashboard,
     },
     {
-      label: "My Structure",
-      path: "/rm/network",
-      icon: Network,
+      label: "Onboarding",
+      path: "/staff-onboarding",
+      icon: UserRoundPlus,
     },
     {
       label: "SC Management",

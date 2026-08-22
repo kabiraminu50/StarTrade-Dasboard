@@ -5,9 +5,9 @@ import {
 } from "lucide-react";
 
 const ROLE_LABELS = {
-  RM: "Relationship Manager",
-  MRM: "Master Relationship Manager",
-  SC: "Super Coordinator",
+  RM: "Regional Manager",
+  MRM: "Merchant Relationship Manager",
+  SC: "State Coordinator",
   DA: "Delivery Agent",
   CRM: "Customer Relationship Manager",
   BO: "Business Owner",

@@ -1,9 +1,13 @@
 import { useState } from "react";
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+// Activation imports
+import Activation from "./assets/staffOnboarding/ActivateAccount";
+
+
 //staffOnboarding imports
 import StaffOnboarding from "./assets/staffOnboarding/StaffOnboarding";
-//staff Dashboard imports
 import RmDashboard from "./assets/roledasboards/rmDashboard/rmDashboard";
 import ScDashboard from "./assets/roledasboards/ScDashboard/scDashboard";
 import MrmDashboard from "./assets/roledasboards/MrmDashboard/MrmDashboard";
@@ -88,8 +92,7 @@ function App() {
       <Routes>
         //staffOnboarding Routes
         <Route path="/staff-onboarding" element={<StaffOnboarding />} />
-
-        // staff dashBoardS Routes
+        <Route path="/activate-account/:id" element={<Activation />} />
         <Route path="/rm/dashboard" element={<RmDashboard />} />
         <Route path="/sc/dashboard" element={<ScDashboard />} />
         <Route path="/mrm/dashboard" element={<MrmDashboard />} />
