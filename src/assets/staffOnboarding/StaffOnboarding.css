@@ -8,7 +8,7 @@
 
   box-sizing: border-box;
 
-  padding: 35px;
+  padding: 35px 24px 80px;
 
   color: #ffffff;
 
@@ -28,9 +28,11 @@
 
 .onboarding-wrapper {
   width: 100%;
-  max-width: 1000px;
+  max-width: 1100px;
 
   margin: 0 auto;
+
+  box-sizing: border-box;
 }
 
 
@@ -39,7 +41,11 @@
 ========================================= */
 
 .onboarding-header {
-  margin-bottom: 30px;
+  width: 100%;
+
+  margin: 0 auto 30px;
+
+  text-align: center;
 }
 
 .brand-label,
@@ -65,11 +71,15 @@
 }
 
 .onboarding-header p {
-  margin: 0;
+  max-width: 650px;
+
+  margin: 0 auto;
 
   color: #858a94;
 
   font-size: 14px;
+
+  line-height: 1.5;
 }
 
 
@@ -84,7 +94,9 @@
 
   width: 100%;
 
-  margin-bottom: 25px;
+  margin: 0 auto 25px;
+
+  box-sizing: border-box;
 }
 
 .progress-step {
@@ -93,6 +105,8 @@
   flex-direction: column;
 
   align-items: center;
+
+  justify-content: center;
 
   gap: 5px;
 
@@ -108,6 +122,8 @@
   align-items: center;
   justify-content: center;
 
+  box-sizing: border-box;
+
   border: 1px solid #292b30;
 
   border-radius: 50%;
@@ -117,12 +133,19 @@
   background: #0b0c0f;
 
   font-size: 13px;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
 }
 
 .progress-step small {
   color: #777b84;
 
   font-size: 11px;
+
+  white-space: nowrap;
 }
 
 .progress-step.active span {
@@ -142,6 +165,8 @@
 
   flex: 1;
 
+  min-width: 15px;
+
   margin: 0 8px;
 
   background: #292b30;
@@ -158,10 +183,19 @@
 
 .onboarding-card {
   width: 100%;
+  max-width: 1000px;
+
+  margin: 0 auto;
 
   box-sizing: border-box;
 
-  padding: 30px;
+  padding: 40px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
 
   background:
     linear-gradient(
@@ -181,7 +215,11 @@
 ========================================= */
 
 .step-heading {
-  margin-bottom: 25px;
+  width: 100%;
+
+  margin: 0 auto 30px;
+
+  text-align: center;
 }
 
 .step-heading h2 {
@@ -189,19 +227,27 @@
 
   color: #ffffff;
 
-  font-size: 22px;
+  font-size: 26px;
 
   font-weight: 500;
+
+  line-height: 1.25;
+
+  text-align: center;
 }
 
 .step-heading p {
-  margin: 0;
+  max-width: 600px;
+
+  margin: 0 auto;
 
   color: #858a94;
 
   font-size: 14px;
 
   line-height: 1.5;
+
+  text-align: center;
 }
 
 
@@ -210,6 +256,8 @@
 ========================================= */
 
 .role-grid {
+  width: 100%;
+
   display: grid;
 
   grid-template-columns:
@@ -228,6 +276,8 @@
   min-height: 85px;
 
   padding: 16px;
+
+  box-sizing: border-box;
 
   text-align: left;
 
@@ -303,6 +353,8 @@
   color: #777b84;
 
   font-size: 12px;
+
+  line-height: 1.4;
 }
 
 .role-arrow {
@@ -318,11 +370,19 @@
 
 .onboarding-form {
   width: 100%;
-  max-width: 650px;
+  max-width: 700px;
+
+  margin: 0 auto;
+
+  box-sizing: border-box;
 }
 
 .form-group {
+  width: 100%;
+
   margin-bottom: 18px;
+
+  box-sizing: border-box;
 }
 
 .form-group label {
@@ -345,9 +405,16 @@
   font-size: 11px;
 }
 
+
+/* =========================================
+   INPUTS
+========================================= */
+
 .form-group input,
 .form-group textarea {
   width: 100%;
+
+  min-width: 0;
 
   box-sizing: border-box;
 
@@ -372,7 +439,13 @@
     box-shadow 0.2s ease;
 }
 
+.form-group input {
+  min-height: 50px;
+}
+
 .form-group textarea {
+  min-height: 110px;
+
   resize: vertical;
 }
 
@@ -396,6 +469,8 @@
 ========================================= */
 
 .form-grid {
+  width: 100%;
+
   display: grid;
 
   grid-template-columns:
@@ -411,6 +486,8 @@
 
 .input-with-icon {
   position: relative;
+
+  width: 100%;
 }
 
 .input-with-icon svg {
@@ -438,6 +515,8 @@
   width: 180px;
   height: 180px;
 
+  margin: 0 auto;
+
   display: flex;
 
   flex-direction: column;
@@ -446,6 +525,8 @@
   justify-content: center;
 
   gap: 8px;
+
+  box-sizing: border-box;
 
   overflow: hidden;
 
@@ -460,11 +541,14 @@
   cursor: pointer;
 
   transition:
-    border-color 0.2s ease;
+    border-color 0.2s ease,
+    background 0.2s ease;
 }
 
 .selfie-upload:hover {
   border-color: #f5c100;
+
+  background: #0d0e10;
 }
 
 .selfie-upload img {
@@ -478,12 +562,16 @@
   color: #d0d0d0;
 
   font-size: 13px;
+
+  text-align: center;
 }
 
 .selfie-upload small {
   color: #555962;
 
   font-size: 11px;
+
+  text-align: center;
 }
 
 
@@ -492,6 +580,8 @@
 ========================================= */
 
 .document-upload {
+  width: 100%;
+
   min-height: 70px;
 
   display: flex;
@@ -520,6 +610,8 @@
 }
 
 .document-upload span {
+  min-width: 0;
+
   color: #cfd1d5;
 
   font-size: 13px;
@@ -527,6 +619,8 @@
   overflow: hidden;
 
   text-overflow: ellipsis;
+
+  white-space: nowrap;
 }
 
 
@@ -543,7 +637,7 @@
   align-items: center;
   justify-content: center;
 
-  margin-bottom: 20px;
+  margin: 0 auto 20px;
 
   color: #f5c100;
 
@@ -566,11 +660,17 @@
 
   gap: 8px;
 
-  min-width: 170px;
+  width: 200px;
 
-  margin-top: 25px;
+  min-width: 200px;
+
+  min-height: 48px;
+
+  margin: 28px auto 0;
 
   padding: 13px 20px;
+
+  box-sizing: border-box;
 
   color: #050608;
 
@@ -588,11 +688,16 @@
 
   transition:
     transform 0.2s ease,
-    opacity 0.2s ease;
+    opacity 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .primary-button:hover {
   transform: translateY(-1px);
+
+  box-shadow:
+    0 8px 25px
+    rgba(245, 193, 0, 0.15);
 }
 
 .primary-button:disabled {
@@ -601,6 +706,8 @@
   cursor: not-allowed;
 
   transform: none;
+
+  box-shadow: none;
 }
 
 
@@ -609,7 +716,11 @@
 ========================================= */
 
 .onboarding-error {
-  margin-bottom: 15px;
+  width: 100%;
+
+  box-sizing: border-box;
+
+  margin: 0 auto 15px;
 
   padding: 12px 14px;
 
@@ -624,6 +735,8 @@
   border-radius: 10px;
 
   font-size: 13px;
+
+  line-height: 1.5;
 }
 
 
@@ -632,6 +745,8 @@
 ========================================= */
 
 .onboarding-success {
+  width: 100%;
+
   max-width: 550px;
 
   margin: 20px auto;
@@ -668,7 +783,9 @@
 }
 
 .onboarding-success p {
-  margin: 7px 0;
+  max-width: 500px;
+
+  margin: 7px auto;
 
   color: #858a94;
 
@@ -682,18 +799,29 @@
    TABLET
 ========================================= */
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
 
   .staff-onboarding {
-    padding: 22px 18px 100px;
+    padding: 28px 20px 80px;
   }
 
-  .onboarding-header h1 {
-    font-size: 26px;
+  .onboarding-wrapper {
+    max-width: 100%;
   }
 
   .onboarding-card {
-    padding: 22px;
+    max-width: 100%;
+
+    padding: 32px;
+  }
+
+  .onboarding-form {
+    max-width: 700px;
+  }
+
+  .role-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
   }
 
 }
@@ -703,30 +831,50 @@
    MOBILE
 ========================================= */
 
-@media (max-width: 560px) {
+@media (max-width: 600px) {
 
   .staff-onboarding {
-    padding: 18px 14px 100px;
+    width: 100%;
+
+    min-height: 100dvh;
+
+    padding: 16px 12px 60px;
   }
 
+
+  /* -----------------------------------------
+     HEADER
+  ----------------------------------------- */
+
   .onboarding-header {
-    margin-bottom: 22px;
+    margin-bottom: 20px;
   }
 
   .onboarding-header h1 {
     font-size: 23px;
+
+    line-height: 1.25;
   }
 
-  .onboarding-card {
-    padding: 18px 15px;
+  .onboarding-header p {
+    font-size: 13px;
+
+    line-height: 1.5;
   }
 
-  .role-grid {
-    grid-template-columns: 1fr;
+
+  /* -----------------------------------------
+     PROGRESS
+  ----------------------------------------- */
+
+  .onboarding-progress {
+    width: 100%;
+
+    margin-bottom: 18px;
   }
 
-  .form-grid {
-    grid-template-columns: 1fr;
+  .progress-step {
+    min-width: 0;
   }
 
   .progress-step small {
@@ -741,16 +889,211 @@
   }
 
   .progress-line {
+    min-width: 8px;
+
     margin: 0 5px;
   }
 
-  .step-heading h2 {
-    font-size: 20px;
+
+  /* -----------------------------------------
+     CARD
+  ----------------------------------------- */
+
+  .onboarding-card {
+    width: 100%;
+
+    max-width: 100%;
+
+    padding: 26px 16px;
+
+    border-radius: 14px;
   }
 
+
+  /* -----------------------------------------
+     FORM
+  ----------------------------------------- */
+
+  .onboarding-form {
+    width: 100%;
+
+    max-width: 100%;
+
+    margin: 0 auto;
+  }
+
+
+  /* -----------------------------------------
+     STEP HEADING
+  ----------------------------------------- */
+
+  .step-heading {
+    width: 100%;
+
+    margin-bottom: 24px;
+
+    text-align: center;
+  }
+
+  .step-heading h2 {
+    font-size: 22px;
+
+    line-height: 1.25;
+  }
+
+  .step-heading p {
+    max-width: 100%;
+
+    font-size: 13px;
+
+    line-height: 1.55;
+  }
+
+
+  /* -----------------------------------------
+     FORM GROUP
+  ----------------------------------------- */
+
+  .form-group {
+    width: 100%;
+
+    margin-bottom: 17px;
+  }
+
+  .form-group label {
+    font-size: 13px;
+  }
+
+
+  /* -----------------------------------------
+     INPUTS
+  ----------------------------------------- */
+
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+
+    min-width: 0;
+
+    box-sizing: border-box;
+
+    font-size: 14px;
+  }
+
+  .form-group input {
+    min-height: 48px;
+
+    padding: 12px;
+  }
+
+  .form-group textarea {
+    min-height: 100px;
+
+    padding: 12px;
+  }
+
+
+  /* -----------------------------------------
+     TWO COLUMN FORM
+  ----------------------------------------- */
+
+  .form-grid {
+    grid-template-columns: 1fr;
+
+    gap: 0;
+  }
+
+
+  /* -----------------------------------------
+     ROLE GRID
+  ----------------------------------------- */
+
+  .role-grid {
+    grid-template-columns: 1fr;
+
+    gap: 10px;
+  }
+
+  .role-card {
+    min-height: 75px;
+
+    padding: 13px;
+  }
+
+  .role-icon {
+    width: 44px;
+    height: 44px;
+  }
+
+
+  /* -----------------------------------------
+     SELFIE
+  ----------------------------------------- */
+
   .selfie-upload {
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
+
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+  /* -----------------------------------------
+     DOCUMENT
+  ----------------------------------------- */
+
+  .document-upload {
+    width: 100%;
+
+    min-height: 62px;
+
+    padding: 12px;
+  }
+
+
+  /* -----------------------------------------
+     BUTTON
+  ----------------------------------------- */
+
+  .primary-button {
+    width: 100%;
+
+    min-width: 0;
+
+    min-height: 50px;
+
+    margin: 22px auto 0;
+
+    font-size: 14px;
+  }
+
+
+  /* -----------------------------------------
+     ERROR
+  ----------------------------------------- */
+
+  .onboarding-error {
+    font-size: 12px;
+
+    padding: 10px 12px;
+  }
+
+
+  /* -----------------------------------------
+     SUCCESS
+  ----------------------------------------- */
+
+  .onboarding-success {
+    max-width: 100%;
+  }
+
+  .onboarding-success h2 {
+    font-size: 21px;
+  }
+
+  .onboarding-success p {
+    font-size: 13px;
   }
 
 }
@@ -763,27 +1106,109 @@
 @media (max-width: 380px) {
 
   .staff-onboarding {
-    padding-left: 10px;
-    padding-right: 10px;
+    padding: 12px 9px 55px;
   }
 
+
   .onboarding-card {
-    padding: 16px 13px;
+    padding: 22px 12px;
+
+    border-radius: 12px;
   }
+
 
   .onboarding-header h1 {
     font-size: 21px;
   }
 
-  .role-card {
-    min-height: 75px;
-
-    padding: 12px;
+  .onboarding-header p {
+    font-size: 12px;
   }
 
-  .role-icon {
-    width: 43px;
-    height: 43px;
+
+  .progress-step span {
+    width: 26px;
+    height: 26px;
+
+    font-size: 11px;
+  }
+
+  .progress-line {
+    margin: 0 3px;
+  }
+
+
+  .step-heading h2 {
+    font-size: 20px;
+  }
+
+  .step-heading p {
+    font-size: 12px;
+  }
+
+
+  .form-group input,
+  .form-group textarea {
+    font-size: 13px;
+  }
+
+
+  .selfie-upload {
+    width: 190px;
+    height: 190px;
+  }
+
+
+  .primary-button {
+    min-height: 48px;
+  }
+
+}
+
+
+/* =========================================
+   VERY SMALL PHONES
+========================================= */
+
+@media (max-width: 340px) {
+
+  .staff-onboarding {
+    padding-left: 7px;
+    padding-right: 7px;
+  }
+
+
+  .onboarding-card {
+    padding: 20px 10px;
+  }
+
+
+  .onboarding-header h1 {
+    font-size: 20px;
+  }
+
+
+  .step-heading h2 {
+    font-size: 19px;
+  }
+
+
+  .progress-step span {
+    width: 24px;
+    height: 24px;
+
+    font-size: 10px;
+  }
+
+
+  .progress-line {
+    margin: 0 2px;
+  }
+
+
+  .selfie-upload {
+    width: 180px;
+    height: 180px;
   }
 
 }
