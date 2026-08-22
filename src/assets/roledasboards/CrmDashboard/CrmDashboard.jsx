@@ -3,10 +3,10 @@ import React, { useEffect, useState } from "react";
 import "./CrmDashboard.css";
 
 import TopNavbar from "../ShareComponent/TopNavbar";
-import SideMenu from "./crmComponent/SideMenu";
+import SideMenu from "./CrmComponent/SideMenu";
 import AccountWalletCard from "../ShareComponent/AccountWalletCard";
-import NetworkOverview from "./crmComponent/NetworkOverView";
-import DailyEarningChart from "./crmComponent/DailyEarningChart";
+import NetworkOverview from "./CrmComponent/NetworkOverView";
+import DailyEarningChart from "./CrmComponent/DailyEarningChart";
 
 const CrmDashboard = () => {
 

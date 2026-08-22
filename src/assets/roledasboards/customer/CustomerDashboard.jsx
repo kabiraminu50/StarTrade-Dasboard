@@ -1,6 +1,6 @@
 import { useState } from "react";
 import React from 'react';
-import TopNavbar from '../../component/navbar/topnavbar';
+import TopNavbar from '../../component/navbar/Topnavbar';
 import AccountOverview from '../../component/hero/AccountOverview';
 import "./CustomerDashboard.css";
 import GreetingSection from './customerComponent/GreetingSection';

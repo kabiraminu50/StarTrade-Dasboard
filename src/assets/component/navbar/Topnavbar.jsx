@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 
-import "./topNavbar.css";
+import "./TopNavbar.css";
 
 import {
   Bell,
