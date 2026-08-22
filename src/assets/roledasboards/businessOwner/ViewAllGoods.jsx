@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import "./viewAllGoods.css";
+import "./ViewAllGoods.css";
 import { useNavigate } from "react-router-dom";
 
 const ViewAllGoods = () => {
