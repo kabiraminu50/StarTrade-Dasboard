@@ -16,14 +16,14 @@ import SaDashboard from "./assets/roledasboards/SaDashboard/SaDashboard";
 
 
 import Login from "./assets/roledasboards/auth/login";
-import Dashboard from "./assets/roledasboards/businessOwner/dashboard";
-import AddShop from "./assets/roledasboards/businessOwner/addShop";
-import ViewAllGoods from "./assets/roledasboards/businessOwner/viewAllGoods";
-import Transfer from "./assets/roledasboards/businessOwner/transfer";
-import UpdateItem from "./assets/roledasboards/businessOwner/updateItem";
-import ShopFeature from "./assets/roledasboards/businessOwner/shopFeature";
+import Dashboard from "./assets/roledasboards/businessOwner/Dashboard";
+import AddShop from "./assets/roledasboards/businessOwner/AddShop";
+import ViewAllGoods from "./assets/roledasboards/businessOwner/ViewAllGoods";
+import Transfer from "./assets/roledasboards/businessOwner/Transfer";
+import UpdateItem from "./assets/roledasboards/businessOwner/UpdateItem";
+import ShopFeature from "./assets/roledasboards/businessOwner/ShopFeature";
 
-import CustomerDashboard from "./assets/roledasboards/customer/customerDashboard";
+import CustomerDashboard from "./assets/roledasboards/customer/CustomerDashboard";
 import AllItems from "./assets/roledasboards/customer/cutomerPages/CustomerAllItems";
 import AllStore from "./assets/roledasboards/customer/cutomerPages/AllStore";
 import Cart from "./assets/roledasboards/customer/cutomerPages/Cart";

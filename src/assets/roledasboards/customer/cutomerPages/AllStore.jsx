@@ -1,11 +1,11 @@
 import React from 'react'
 
-import TopNavbar from '../customerComponent/topNavbar'
+import TopNavbar from '../customerComponent/TopNavbar'
 import SearchBar from '../customerComponent/SearchBar'
-import CategoryTabs from '../customerComponent/categoryTabs'
-import FeaturedShopsSection from '../customerComponent/featuredShopsSection'
-import AllShopsSection from '../customerComponent/allShopsSection'
-import BottomNavigation from '../customerComponent/bottomNavigation'
+import CategoryTabs from '../customerComponent/CategoryTabs'
+import FeaturedShopsSection from '../customerComponent/FeaturedShopsSection'
+import AllShopsSection from '../customerComponent/AllShopsSection'
+import BottomNavigation from '../customerComponent/BottomNavigation'
 import './AllStore.css'
 function AllShops() {
   return (

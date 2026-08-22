@@ -1,6 +1,6 @@
 import React from "react";
 
-import TopNavbar from "../customerComponent/topNavbar";
+import TopNavbar from "../customerComponent/TopNavbar";
 import SearchBar from "../customerComponent/SearchBar";
 import AllStoreItems from "../customerComponent/AllStoreItems";
 

@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import TopNavbar from "../customerComponent/topNavbar";
+import TopNavbar from "../customerComponent/TopNavbar";
 import "./Cart.css";
 
 

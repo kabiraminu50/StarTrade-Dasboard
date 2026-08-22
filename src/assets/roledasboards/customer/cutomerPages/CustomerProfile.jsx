@@ -1,5 +1,5 @@
 import React from 'react'
-import TopNavbar from '../customerComponent/topNavbar'
+import TopNavbar from '../customerComponent/TopNavbar'
 
 function CustomerProfile() {
   return (

@@ -2,7 +2,7 @@ import { useState } from "react";
 import React from 'react';
 import TopNavbar from '../../component/navbar/topnavbar';
 import AccountOverview from '../../component/hero/AccountOverview';
-import "./customerDashboard.css";
+import "./CustomerDashboard.css";
 import GreetingSection from './customerComponent/GreetingSection';
 import FavouriteShop from './customerComponent/FavouriteStoreComponent';
 import ShopItems from './customerComponent/ShopItems';

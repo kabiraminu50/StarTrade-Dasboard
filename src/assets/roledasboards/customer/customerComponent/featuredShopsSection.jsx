@@ -1,5 +1,5 @@
 import React from 'react'
-import './featuredShopsSection.css'
+import './FeaturedShopsSection.css'
 
 function FeaturedShopsSection() {
 

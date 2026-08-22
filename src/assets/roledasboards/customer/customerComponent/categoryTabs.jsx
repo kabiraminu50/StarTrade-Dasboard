@@ -1,5 +1,5 @@
 import React from 'react'
-import './categoryTabs.css'
+import './CategoryTabs.css'
 
 const categories = [
   'All',

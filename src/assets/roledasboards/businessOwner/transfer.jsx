@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import "./transfer.css";
+import "./Transfer.css";
 
 const banks = [
   { name: "Access Bank", code: "044" },

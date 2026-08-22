@@ -1,8 +1,8 @@
 import React from 'react'
-import './payOut.css'
+import './PayOut.css'
 
-import TopNavbar from '../customerComponent/topNavbar'
-import Transfer from '../../businessOwner/transfer'
+import TopNavbar from '../customerComponent/TopNavbar'
+import Transfer from '../../businessOwner/Transfer'
 
 function PayOut() {
   return (

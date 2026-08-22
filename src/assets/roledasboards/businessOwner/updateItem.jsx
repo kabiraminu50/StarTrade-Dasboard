@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "./updateItem.css";
+import "./UpdateItem.css";
 import axios from "axios";
 import { useParams } from "react-router-dom";
 

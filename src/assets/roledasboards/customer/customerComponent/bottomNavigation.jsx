@@ -1,5 +1,5 @@
 import React from 'react'
-import './bottomNavigation.css'
+import './BottomNavigation.css'
 import { useNavigate } from 'react-router-dom'
 import {
   House,
