@@ -9,13 +9,14 @@ import Activation from "./assets/staffOnboarding/ActivateAccount";
 //staffOnboarding imports
 import StaffOnboarding from "./assets/staffOnboarding/StaffOnboarding";
 import RmDashboard from "./assets/roledasboards/rmDashboard/RmDashboard";
+
 import ScDashboard from "./assets/roledasboards/ScDashboard/ScDashboard";
 import MrmDashboard from "./assets/roledasboards/MrmDashboard/MrmDashboard";
 import CrmDashboard from "./assets/roledasboards/CrmDashboard/CrmDashboard";
 import SaDashboard from "./assets/roledasboards/SaDashboard/SaDashboard";
 
 
-import Login from "./assets/roledasboards/auth/login";
+import Login from "./assets/roledasboards/auth/Login";
 import Dashboard from "./assets/roledasboards/businessOwner/Dashboard";
 import AddShop from "./assets/roledasboards/businessOwner/AddShop";
 import ViewAllGoods from "./assets/roledasboards/businessOwner/ViewAllGoods";
