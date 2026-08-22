@@ -22,7 +22,7 @@ import ViewAllGoods from "./assets/roledasboards/businessOwner/ViewAllGoods";
 import Transfer from "./assets/roledasboards/businessOwner/Transfer";
 import UpdateItem from "./assets/roledasboards/businessOwner/UpdateItem";
 import ShopFeature from "./assets/roledasboards/businessOwner/ShopFeature";
-
+/// Bo Dashboard
 import CustomerDashboard from "./assets/roledasboards/customer/CustomerDashboard";
 import AllItems from "./assets/roledasboards/customer/cutomerPages/CustomerAllItems";
 import AllStore from "./assets/roledasboards/customer/cutomerPages/AllStore";
